@@ -4,6 +4,11 @@ import { logger } from '../utils/logger';
 
 const VALID_SIGNALS: Signal[] = ['STRONG_BUY', 'BUY', 'HOLD', 'SELL', 'STRONG_SELL'];
 
+// Cache AI results per crypto symbol — crypto sentiment changes slowly vs check interval
+// 30 symbols × 288 cycles/day = 8,640 calls → with 2h cache = ~360 calls/day
+const CRYPTO_AI_CACHE_TTL_MS = Number(process.env.CRYPTO_AI_CACHE_TTL_MS) || 2 * 60 * 60 * 1000; // 2h default
+const cryptoAiCache = new Map<string, { result: StrategyResult; expiresAt: number }>();
+
 interface AIResponse {
   signal: Signal;
   confidence: number;
@@ -141,6 +146,13 @@ Respond ONLY with valid JSON:
 }
 
 export async function analyzeCryptoSentiment(symbol: string): Promise<StrategyResult> {
+  // Return cached result if still fresh
+  const cached = cryptoAiCache.get(symbol);
+  if (cached && Date.now() < cached.expiresAt) {
+    logger.signal(`[CRYPTO/CACHE] ${symbol}: ${cached.result.signal} (${cached.result.confidence.toFixed(2)}) — cached`);
+    return { ...cached.result, timestamp: new Date() };
+  }
+
   let result: AIResponse;
 
   try {
@@ -155,7 +167,7 @@ export async function analyzeCryptoSentiment(symbol: string): Promise<StrategyRe
     }
   }
 
-  return {
+  const strategyResult: StrategyResult = {
     strategy: 'crypto_sentiment',
     symbol,
     signal: result.signal,
@@ -163,4 +175,11 @@ export async function analyzeCryptoSentiment(symbol: string): Promise<StrategyRe
     reasoning: `[${result.source}] ${result.reasoning}`,
     timestamp: new Date(),
   };
+
+  // Cache result (don't cache fallback failures)
+  if (result.source !== 'fallback') {
+    cryptoAiCache.set(symbol, { result: strategyResult, expiresAt: Date.now() + CRYPTO_AI_CACHE_TTL_MS });
+  }
+
+  return strategyResult;
 }

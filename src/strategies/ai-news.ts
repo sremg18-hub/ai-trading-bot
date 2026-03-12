@@ -12,6 +12,11 @@ interface AIResponse {
 
 const VALID_SIGNALS: Signal[] = ['STRONG_BUY', 'BUY', 'HOLD', 'SELL', 'STRONG_SELL'];
 
+// Cache AI results per symbol to avoid redundant API calls
+// News from last 24-48h doesn't change every 60 seconds
+const AI_CACHE_TTL_MS = Number(process.env.AI_NEWS_CACHE_TTL_MS) || 30 * 60 * 1000; // 30 min default
+const aiCache = new Map<string, { result: StrategyResult; expiresAt: number }>();
+
 function parseAIResponse(text: string, source: 'sonar' | 'claude'): AIResponse {
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) {
@@ -135,8 +140,15 @@ async function callClaude(symbol: string, news: NewsItem[]): Promise<AIResponse>
   }
 }
 
-// === Main: Sonar → Claude → HOLD fallback ===
+// === Main: Sonar → Claude → HOLD fallback (with cache) ===
 export async function analyzeNews(symbol: string, recentNews: NewsItem[]): Promise<StrategyResult> {
+  // Return cached result if still fresh
+  const cached = aiCache.get(symbol);
+  if (cached && Date.now() < cached.expiresAt) {
+    logger.signal(`[AI/CACHE] ${symbol}: ${cached.result.signal} (${cached.result.confidence.toFixed(2)}) — cached`);
+    return { ...cached.result, timestamp: new Date() };
+  }
+
   let result: AIResponse;
 
   // Try Sonar first (real-time web search)
@@ -159,7 +171,7 @@ export async function analyzeNews(symbol: string, recentNews: NewsItem[]): Promi
     }
   }
 
-  return {
+  const strategyResult: StrategyResult = {
     strategy: 'ai_news',
     symbol,
     signal: result.signal,
@@ -167,4 +179,11 @@ export async function analyzeNews(symbol: string, recentNews: NewsItem[]): Promi
     reasoning: `[${result.source}] ${result.reasoning}`,
     timestamp: new Date(),
   };
+
+  // Cache result (don't cache fallback failures)
+  if (result.source !== 'fallback') {
+    aiCache.set(symbol, { result: strategyResult, expiresAt: Date.now() + AI_CACHE_TTL_MS });
+  }
+
+  return strategyResult;
 }
