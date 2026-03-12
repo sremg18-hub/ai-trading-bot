@@ -170,12 +170,49 @@ async function checkPositionExits(positions: ReturnType<typeof getPositions> ext
   }
 }
 
+// --- Rebalance: reduce crypto exposure if over limit (sell worst performers first) ---
+async function rebalanceCryptoIfOverExposed(positions: Awaited<ReturnType<typeof getPositions>>): Promise<void> {
+  const cryptoPos = positions.filter(p => p.assetClass === 'crypto' && p.qty > 0);
+  const totalExposure = cryptoPos.reduce((sum, p) => sum + Math.abs(p.marketValue), 0);
+  const limit = config.cryptoMaxTotalExposure;
+
+  if (totalExposure <= limit * 1.05) return; // Only act if >5% over limit
+
+  const excess = totalExposure - limit;
+  logger.warn(`[REBALANCE] Crypto over-exposed: $${totalExposure.toFixed(0)} > $${limit} (excess: $${excess.toFixed(0)}). Reducing...`);
+
+  // Sort by worst PnL first (cut losers, keep winners)
+  const sorted = [...cryptoPos].sort((a, b) => a.unrealizedPnlPercent - b.unrealizedPnlPercent);
+
+  let toReduce = excess;
+  for (const pos of sorted) {
+    if (toReduce <= 0) break;
+    // Sell enough of this position to cover the excess
+    const sellValue = Math.min(Math.abs(pos.marketValue), toReduce * 1.1);
+    const sellQty = Math.round((sellValue / pos.currentPrice) * 10000) / 10000;
+    if (sellQty <= 0 || pos.currentPrice <= 0) continue;
+
+    logger.trade(`[REBALANCE] Selling ${pos.symbol} x${sellQty} to reduce exposure ($${sellValue.toFixed(0)})`);
+    try {
+      await submitCryptoOrder(pos.symbol, Math.min(sellQty, pos.qty), 'sell');
+      cryptoTotalTrades++; cryptoSuccessfulTrades++;
+      toReduce -= sellValue;
+      saveState();
+    } catch (err) {
+      logger.error(`[REBALANCE] Failed to sell ${pos.symbol}: ${err}`);
+    }
+  }
+}
+
 // --- Fast Exit Monitor — runs every EXIT_CHECK_MS (default 30s) independently ---
 async function exitMonitorLoop(): Promise<void> {
   try {
     const positions = await getPositions();
     // Always check crypto (24/7)
-    if (cryptoBotRunning) await checkPositionExits(positions, true);
+    if (cryptoBotRunning) {
+      await checkPositionExits(positions, true);
+      await rebalanceCryptoIfOverExposed(positions);
+    }
     // Check stocks only during market hours
     if (stocksBotRunning && stocksMode === 'ACTIVE') await checkPositionExits(positions, false);
   } catch (err) {
