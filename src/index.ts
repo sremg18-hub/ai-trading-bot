@@ -13,6 +13,13 @@ import { logger } from './utils/logger';
 const config = loadConfig();
 const app = express();
 
+// --- Race-condition guard: tracks symbols currently being closed ---
+// Prevents exit monitor AND trading cycle from both submitting close orders simultaneously
+const closingPositions = new Set<string>();
+
+// --- Blocked symbols: 403/unsupported assets — skip forever this session ---
+const blockedSymbols = new Set<string>();
+
 // --- Market Schedule (Eastern Time) ---
 const PRE_MARKET_HOUR = 9;
 const MARKET_OPEN_HOUR = 9;
@@ -184,6 +191,12 @@ async function checkPositionExits(positions: ReturnType<typeof getPositions> ext
 
     if (!reason) continue;
 
+    // Skip if already being closed by another concurrent loop
+    if (closingPositions.has(pos.symbol)) continue;
+    // Skip symbols that returned 403 (unsupported or market closed)
+    if (blockedSymbols.has(pos.symbol)) continue;
+
+    closingPositions.add(pos.symbol);
     logger.trade(`[EXIT] Closing ${pos.symbol} — ${reason} (P&L: $${pos.unrealizedPnl.toFixed(2)})`);
     try {
       if (isCrypto) {
@@ -195,7 +208,15 @@ async function checkPositionExits(positions: ReturnType<typeof getPositions> ext
       }
       saveState();
     } catch (err) {
-      logger.error(`[EXIT] Failed to close ${pos.symbol}: ${err}`);
+      const errStr = String(err);
+      if (errStr.includes('403') || errStr.includes('forbidden') || errStr.includes('not tradable')) {
+        blockedSymbols.add(pos.symbol);
+        logger.warn(`[EXIT] ${pos.symbol} blocked (403) — will skip this session. Check if Alpaca paper trading supports this symbol.`);
+      } else {
+        logger.error(`[EXIT] Failed to close ${pos.symbol}: ${err}`);
+      }
+    } finally {
+      closingPositions.delete(pos.symbol);
     }
   }
 }
@@ -335,6 +356,17 @@ async function runStocksCycle(): Promise<void> {
       const riskCheck = canTrade(decision, positions, account.equity, account.buying_power, clock.is_open);
 
       if (decision.action !== 'HOLD' && riskCheck.allowed) {
+        // Skip if exit monitor is already closing this position
+        if (closingPositions.has(decision.symbol)) {
+          logger.warn(`[STOCKS] Skipped ${decision.symbol}: position is being closed by exit monitor`);
+          continue;
+        }
+        // Skip if symbol is blocked (403 from Alpaca)
+        if (blockedSymbols.has(decision.symbol)) {
+          logger.warn(`[STOCKS] Skipped ${decision.symbol}: symbol blocked (403)`);
+          continue;
+        }
+
         stocksTotalTrades++;
         const tradeLog: TradeLog = {
           id: `stock-${Date.now()}-${decision.symbol}`, decision, orderResult: {},
@@ -346,6 +378,11 @@ async function runStocksCycle(): Promise<void> {
           logger.trade(`[STOCKS] ${decision.action} ${decision.symbol} x${decision.quantity} @~$${decision.price.toFixed(2)}`);
         } catch (err) {
           tradeLog.status = 'FAILED'; tradeLog.error = String(err); stocksFailedTrades++;
+          const errStr = String(err);
+          if (errStr.includes('403') || errStr.includes('forbidden') || errStr.includes('not tradable')) {
+            blockedSymbols.add(decision.symbol);
+            logger.warn(`[STOCKS] ${decision.symbol} blocked (403) — skipping this session`);
+          }
         }
         stocksTrades.push(tradeLog);
         if (stocksTrades.length > MAX_LOG) stocksTrades.shift();
@@ -450,19 +487,38 @@ async function runCryptoCycle(): Promise<void> {
       }
 
       if (allowed) {
+        const orderSymbol = position ? position.symbol : decision.symbol;
+
+        // Skip if exit monitor is already closing this position
+        if (closingPositions.has(orderSymbol)) {
+          logger.warn(`[CRYPTO] Skipped ${decision.symbol}: position is being closed by exit monitor`);
+          continue;
+        }
+        // Skip 403-blocked symbols
+        if (blockedSymbols.has(orderSymbol) || blockedSymbols.has(decision.symbol)) {
+          logger.warn(`[CRYPTO] Skipped ${decision.symbol}: symbol blocked (403/unsupported)`);
+          continue;
+        }
+
         cryptoTotalTrades++;
         const tradeLog: TradeLog = {
           id: `crypto-${Date.now()}-${decision.symbol}`, decision, orderResult: {},
           status: 'EXECUTED', timestamp: new Date(),
         };
         try {
-          const orderSymbol = position ? position.symbol : decision.symbol;
           tradeLog.orderResult = await submitCryptoOrder(orderSymbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
           cryptoSuccessfulTrades++;
           logger.trade(`[CRYPTO] ${decision.action} ${decision.symbol} x${decision.quantity}`);
         } catch (err) {
           tradeLog.status = 'FAILED'; tradeLog.error = String(err); cryptoFailedTrades++;
-          logger.error(`[CRYPTO] Order failed: ${err}`);
+          const errStr = String(err);
+          if (errStr.includes('403') || errStr.includes('forbidden') || errStr.includes('not tradable')) {
+            blockedSymbols.add(orderSymbol);
+            blockedSymbols.add(decision.symbol);
+            logger.warn(`[CRYPTO] ${decision.symbol} blocked (403) — skipping this session. Not supported on Alpaca paper trading.`);
+          } else {
+            logger.error(`[CRYPTO] Order failed: ${err}`);
+          }
         }
         cryptoTrades.push(tradeLog);
         if (cryptoTrades.length > MAX_LOG) cryptoTrades.shift();
@@ -552,6 +608,7 @@ app.get('/api/portfolio', async (_req, res) => {
 });
 
 app.get('/api/logs', (_req, res) => res.json(logger.getLogs(200)));
+app.get('/api/blocked', (_req, res) => res.json([...blockedSymbols]));
 app.post('/api/bot/start', (_req, res) => { startStocks(); res.json({ status: 'started' }); });
 app.post('/api/bot/stop', (_req, res) => { stopStocks(); res.json({ status: 'stopped' }); });
 
