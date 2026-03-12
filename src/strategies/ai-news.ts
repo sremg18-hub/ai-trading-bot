@@ -140,29 +140,68 @@ async function callClaude(symbol: string, news: NewsItem[]): Promise<AIResponse>
   }
 }
 
-// === Main: Sonar → Claude → HOLD fallback (with cache) ===
+// Background refresh: fetch new AI signal without blocking the trading cycle
+const refreshingSymbols = new Set<string>();
+
+async function refreshAIInBackground(symbol: string, recentNews: NewsItem[]): Promise<void> {
+  if (refreshingSymbols.has(symbol)) return; // Already refreshing
+  refreshingSymbols.add(symbol);
+
+  try {
+    let result: AIResponse;
+    try {
+      result = await callSonar(symbol);
+      logger.signal(`[AI/SONAR/BG] ${symbol}: ${result.signal} (${result.confidence.toFixed(2)}) — background refresh`);
+    } catch (sonarErr) {
+      try {
+        if (recentNews.length === 0) throw new Error('No news');
+        result = await callClaude(symbol, recentNews);
+        logger.signal(`[AI/CLAUDE/BG] ${symbol}: ${result.signal} (${result.confidence.toFixed(2)}) — background refresh`);
+      } catch {
+        return; // Keep stale cache rather than overwriting with failure
+      }
+    }
+
+    const strategyResult: StrategyResult = {
+      strategy: 'ai_news',
+      symbol,
+      signal: result.signal,
+      confidence: result.confidence,
+      reasoning: `[${result.source}] ${result.reasoning}`,
+      timestamp: new Date(),
+    };
+    aiCache.set(symbol, { result: strategyResult, expiresAt: Date.now() + AI_CACHE_TTL_MS });
+  } finally {
+    refreshingSymbols.delete(symbol);
+  }
+}
+
+// === Main: Sonar → Claude → HOLD fallback (with non-blocking cache) ===
 export async function analyzeNews(symbol: string, recentNews: NewsItem[]): Promise<StrategyResult> {
-  // Return cached result if still fresh
   const cached = aiCache.get(symbol);
+
+  // Fresh cache → return immediately
   if (cached && Date.now() < cached.expiresAt) {
     logger.signal(`[AI/CACHE] ${symbol}: ${cached.result.signal} (${cached.result.confidence.toFixed(2)}) — cached`);
     return { ...cached.result, timestamp: new Date() };
   }
 
-  let result: AIResponse;
+  // Stale cache → return stale result immediately, refresh in background (non-blocking)
+  if (cached) {
+    logger.signal(`[AI/STALE] ${symbol}: ${cached.result.signal} (${cached.result.confidence.toFixed(2)}) — using stale, refreshing in background`);
+    refreshAIInBackground(symbol, recentNews).catch(() => {});
+    return { ...cached.result, timestamp: new Date() };
+  }
 
-  // Try Sonar first (real-time web search)
+  // No cache at all (first run) → blocking fetch
+  let result: AIResponse;
   try {
     result = await callSonar(symbol);
     logger.signal(`[AI/SONAR] ${symbol}: ${result.signal} (confidence: ${result.confidence.toFixed(2)}) — ${result.reasoning}`);
   } catch (sonarErr) {
     logger.warn(`Sonar failed for ${symbol}: ${sonarErr}`);
-
-    // Fallback to Claude with Alpaca news
     try {
-      if (recentNews.length === 0) {
-        throw new Error('No news to analyze');
-      }
+      if (recentNews.length === 0) throw new Error('No news to analyze');
       result = await callClaude(symbol, recentNews);
       logger.signal(`[AI/CLAUDE] ${symbol}: ${result.signal} (confidence: ${result.confidence.toFixed(2)}) — ${result.reasoning}`);
     } catch (claudeErr) {
@@ -180,7 +219,6 @@ export async function analyzeNews(symbol: string, recentNews: NewsItem[]): Promi
     timestamp: new Date(),
   };
 
-  // Cache result (don't cache fallback failures)
   if (result.source !== 'fallback') {
     aiCache.set(symbol, { result: strategyResult, expiresAt: Date.now() + AI_CACHE_TTL_MS });
   }

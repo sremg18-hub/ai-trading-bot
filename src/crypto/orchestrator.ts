@@ -32,10 +32,11 @@ export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDe
     signalToScore(sentiment.signal) * config.cryptoWeightAiNews * sentiment.confidence +
     signalToScore(momentum.signal) * config.cryptoWeightMomentum * momentum.confidence;
 
+  // Lower thresholds for medium-frequency trading
   let action: 'BUY' | 'SELL' | 'HOLD';
-  if (weightedScore > 0.08) {
+  if (weightedScore > 0.04) {
     action = 'BUY';
-  } else if (weightedScore < -0.08) {
+  } else if (weightedScore < -0.04) {
     action = 'SELL';
   } else {
     action = 'HOLD';

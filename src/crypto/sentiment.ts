@@ -145,16 +145,59 @@ Respond ONLY with valid JSON:
   }
 }
 
+// Background refresh: fetch new AI signal without blocking the trading cycle
+const refreshingCryptoSymbols = new Set<string>();
+
+async function refreshCryptoAIInBackground(symbol: string): Promise<void> {
+  if (refreshingCryptoSymbols.has(symbol)) return;
+  refreshingCryptoSymbols.add(symbol);
+
+  try {
+    let result: AIResponse;
+    try {
+      result = await callSonarCrypto(symbol);
+      logger.signal(`[CRYPTO/SONAR/BG] ${symbol}: ${result.signal} (${result.confidence.toFixed(2)}) — background refresh`);
+    } catch {
+      try {
+        result = await callClaudeCrypto(symbol);
+        logger.signal(`[CRYPTO/CLAUDE/BG] ${symbol}: ${result.signal} (${result.confidence.toFixed(2)}) — background refresh`);
+      } catch {
+        return; // Keep stale cache
+      }
+    }
+
+    const strategyResult: StrategyResult = {
+      strategy: 'crypto_sentiment',
+      symbol,
+      signal: result.signal,
+      confidence: result.confidence,
+      reasoning: `[${result.source}] ${result.reasoning}`,
+      timestamp: new Date(),
+    };
+    cryptoAiCache.set(symbol, { result: strategyResult, expiresAt: Date.now() + CRYPTO_AI_CACHE_TTL_MS });
+  } finally {
+    refreshingCryptoSymbols.delete(symbol);
+  }
+}
+
 export async function analyzeCryptoSentiment(symbol: string): Promise<StrategyResult> {
-  // Return cached result if still fresh
   const cached = cryptoAiCache.get(symbol);
+
+  // Fresh cache → return immediately
   if (cached && Date.now() < cached.expiresAt) {
     logger.signal(`[CRYPTO/CACHE] ${symbol}: ${cached.result.signal} (${cached.result.confidence.toFixed(2)}) — cached`);
     return { ...cached.result, timestamp: new Date() };
   }
 
-  let result: AIResponse;
+  // Stale cache → return stale immediately, refresh in background (non-blocking)
+  if (cached) {
+    logger.signal(`[CRYPTO/STALE] ${symbol}: ${cached.result.signal} (${cached.result.confidence.toFixed(2)}) — using stale, refreshing in background`);
+    refreshCryptoAIInBackground(symbol).catch(() => {});
+    return { ...cached.result, timestamp: new Date() };
+  }
 
+  // No cache at all (first run) → blocking fetch
+  let result: AIResponse;
   try {
     result = await callSonarCrypto(symbol);
     logger.signal(`[CRYPTO/SONAR] ${symbol}: ${result.signal} (${result.confidence.toFixed(2)})`);
@@ -176,7 +219,6 @@ export async function analyzeCryptoSentiment(symbol: string): Promise<StrategyRe
     timestamp: new Date(),
   };
 
-  // Cache result (don't cache fallback failures)
   if (result.source !== 'fallback') {
     cryptoAiCache.set(symbol, { result: strategyResult, expiresAt: Date.now() + CRYPTO_AI_CACHE_TTL_MS });
   }

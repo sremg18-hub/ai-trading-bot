@@ -308,7 +308,7 @@ async function stocksSmartLoop(): Promise<void> {
     const et = getETNow();
     logger.info(`[STOCKS/${stocksMode}] ET: ${et.toLocaleTimeString('en-US')}`);
     await runStocksCycle();
-    const interval = inMarket ? config.checkIntervalMs : 5 * 60 * 1000;
+    const interval = inMarket ? config.checkIntervalMs : 2 * 60 * 1000; // 2min pre-market
     if (stocksBotRunning) stocksTimer = setTimeout(stocksSmartLoop, interval);
   } else {
     stocksMode = 'SLEEPING';

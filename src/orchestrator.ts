@@ -44,11 +44,11 @@ export async function makeDecision(symbol: string): Promise<OrchestratorDecision
     redditNote = ` | WSB:${reddit.mentions}posts(${reddit.score > 0 ? '+' : ''}${reddit.score.toFixed(2)})`;
   }
 
-  // Determine action
+  // Determine action (lower thresholds for medium-frequency trading)
   let action: 'BUY' | 'SELL' | 'HOLD';
-  if (weightedScore > 0.3) {
+  if (weightedScore > 0.15) {
     action = 'BUY';
-  } else if (weightedScore < -0.3) {
+  } else if (weightedScore < -0.15) {
     action = 'SELL';
   } else {
     action = 'HOLD';
