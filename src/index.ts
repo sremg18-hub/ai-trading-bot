@@ -92,6 +92,42 @@ const cryptoSignals: StrategyResult[] = [];
 
 const MAX_LOG = 50;
 
+// --- Helper: take-profit / stop-loss auto-exit ---
+async function checkPositionExits(positions: ReturnType<typeof getPositions> extends Promise<infer T> ? T : never, isCrypto: boolean): Promise<void> {
+  const tp = config.takeProfitPercent;
+  const sl = config.stopLossPercent;
+
+  for (const pos of positions) {
+    const isCryptoPos = pos.symbol.includes('/');
+    if (isCryptoPos !== isCrypto) continue;
+    if (pos.qty <= 0) continue;
+
+    const pnlPct = pos.unrealizedPnlPercent;
+    let reason = '';
+
+    if (pnlPct >= tp) {
+      reason = `Take-profit: +${pnlPct.toFixed(1)}% >= +${tp}%`;
+    } else if (pnlPct <= -sl) {
+      reason = `Stop-loss: ${pnlPct.toFixed(1)}% <= -${sl}%`;
+    }
+
+    if (!reason) continue;
+
+    logger.trade(`[EXIT] Closing ${pos.symbol} — ${reason} (P&L: $${pos.unrealizedPnl.toFixed(2)})`);
+    try {
+      if (isCrypto) {
+        await submitCryptoOrder(pos.symbol, pos.qty, 'sell');
+        cryptoTotalTrades++; cryptoSuccessfulTrades++;
+      } else {
+        await submitOrder(pos.symbol, pos.qty, 'sell');
+        stocksTotalTrades++; stocksSuccessfulTrades++;
+      }
+    } catch (err) {
+      logger.error(`[EXIT] Failed to close ${pos.symbol}: ${err}`);
+    }
+  }
+}
+
 // --- Helper: update portfolio ---
 async function updatePortfolio(): Promise<void> {
   try {
@@ -125,6 +161,9 @@ async function runStocksCycle(): Promise<void> {
     };
 
     logger.info(`Portfolio: equity=$${account.equity.toFixed(2)}, cash=$${account.cash.toFixed(2)}`);
+
+    // Check take-profit / stop-loss before new signals
+    if (clock.is_open) await checkPositionExits(positions, false);
 
     for (const symbol of config.tradeSymbols) {
       try {
@@ -199,6 +238,9 @@ async function runCryptoCycle(): Promise<void> {
   try {
     const [account, positions] = await Promise.all([getAccount(), getPositions()]);
     const cryptoPositions = positions.filter(p => p.symbol.includes('/'));
+
+    // Check take-profit / stop-loss before new signals
+    await checkPositionExits(positions, true);
 
     for (const symbol of config.cryptoSymbols) {
       try {
