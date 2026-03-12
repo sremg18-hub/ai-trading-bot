@@ -43,8 +43,10 @@ export function canTrade(
       };
     }
 
-    // Check total exposure limit
-    const totalExposure = positions.reduce((sum, p) => sum + p.marketValue, 0);
+    // Check total exposure limit (stocks only — exclude crypto positions)
+    const totalExposure = positions
+      .filter(p => p.assetClass !== 'crypto')
+      .reduce((sum, p) => sum + p.marketValue, 0);
     if (totalExposure + orderCost > config.maxTotalExposure) {
       return {
         allowed: false,
