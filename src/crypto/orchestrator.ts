@@ -3,21 +3,24 @@ import { getCryptoBars, getLatestCryptoQuote, getPositions, getAccount } from '.
 import { analyzeTechnicalCrypto } from './technical';
 import { analyzeCryptoSentiment } from './sentiment';
 import { analyzeMomentum } from './momentum';
-import { OrchestratorDecision, StrategyResult, signalToScore } from '../types';
+import { OrchestratorDecision, StrategyResult, PositionInfo, signalToScore } from '../types';
 import { logger } from '../utils/logger';
 
-export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDecision> {
+export async function makeCryptoDecision(
+  symbol: string,
+  cachedPositions?: PositionInfo[],
+): Promise<OrchestratorDecision> {
   const config = loadConfig();
 
-  // Get hourly bars for crypto (more granular than daily)
-  const [bars, quote, positions, account] = await Promise.all([
+  // Get hourly bars for crypto + current quote
+  const [bars, quote, positions] = await Promise.all([
     getCryptoBars(symbol, '1Hour', 100),
     getLatestCryptoQuote(symbol),
-    getPositions(),
-    getAccount(),
+    cachedPositions ? Promise.resolve(cachedPositions) : getPositions(),
   ]);
 
   // Run all 3 crypto strategies in parallel
+  const account = await getAccount(); // needed for copy strategy (equity)
   const [technical, sentiment, momentum] = await Promise.all([
     analyzeTechnicalCrypto(symbol, bars),
     analyzeCryptoSentiment(symbol),
@@ -64,13 +67,12 @@ export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDe
     quantity = Math.round((maxValue / currentPriceNum) * 10000) / 10000; // 4 decimal places
     if (quantity * currentPriceNum < 1) quantity = 0; // min $1 order
   } else if (action === 'BUY') {
-    // No valid price — can't size the order
-    action = 'HOLD';
+    action = 'HOLD'; // No valid price
   } else if (action === 'SELL') {
     // Match by both BTC/USD and BTCUSD formats
     const position = positions.find(p => p.symbol === normalizedSymbol || p.symbol === symbol);
     if (position && position.qty > 0) {
-      quantity = Math.round(position.qty * confidence * 10000) / 10000;
+      quantity = position.qty; // Always sell full position
     }
   }
 

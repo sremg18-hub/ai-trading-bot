@@ -24,8 +24,9 @@ export interface Config {
   cryptoWeightTechnical: number;
   cryptoWeightAiNews: number;
   cryptoWeightMomentum: number;
-  exitCheckMs: number;   // How often to scan for TP/SL exits (ms)
-  stateFile: string;     // Path to persist state (for Coolify volume)
+  exitCheckMs: number;        // How often to scan for TP/SL exits (ms)
+  stateFile: string;          // Path to persist state (for Coolify volume)
+  maxDailyLossPercent: number; // Halt trading for the day if down this % from prior close
 }
 
 export function loadConfig(): Config {
@@ -57,6 +58,7 @@ export function loadConfig(): Config {
     cryptoWeightMomentum: Number(process.env.CRYPTO_WEIGHT_MOMENTUM) || 0.30,
     exitCheckMs: Number(process.env.EXIT_CHECK_MS) || 30000,
     stateFile: process.env.STATE_FILE || '/data/state.json',
+    maxDailyLossPercent: Number(process.env.MAX_DAILY_LOSS_PERCENT) || 5,
   };
 }
 

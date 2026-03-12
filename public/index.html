@@ -98,6 +98,7 @@
     <div class="schedule-bar">
       <span>ET: <span class="et-time" id="etTime">--:--</span></span>
       <span class="mode-badge mode-STOPPED" id="modeBadge">--</span>
+      <span id="dailyHaltBadge" style="display:none;background:rgba(239,68,68,.2);color:#ef4444;padding:.2rem .6rem;border-radius:3px;font-size:.7rem;font-weight:600">DAILY LOSS LIMIT HIT</span>
       <span>Schedule: 9:00 AM–4:00 PM ET</span>
       <span class="next-wake" id="nextWake"></span>
       <span style="margin-left:auto"><button class="start" onclick="apiPost('/api/bot/start')">START</button><button class="stop" onclick="apiPost('/api/bot/stop')" style="margin-left:.3rem">STOP</button></span>
@@ -175,8 +176,12 @@ function updateStocks(data){
     document.getElementById('cash').textContent=fmt(p.cash);
     const d=document.getElementById('dayPnl');d.textContent=(p.dayPnl>=0?'+':'')+fmt(p.dayPnl);d.className='value '+pnlClass(p.dayPnl);
     const t=document.getElementById('totalPnl');t.textContent=(p.totalPnl>=0?'+':'')+fmt(p.totalPnl);t.className='value '+pnlClass(p.totalPnl);
-    const roi=p.totalPnl/100000*100;
+    const base=data.startingEquity||100000;
+    const roi=base>0?p.totalPnl/base*100:0;
     const r=document.getElementById('totalRoi');r.textContent=(roi>=0?'+':'')+roi.toFixed(3)+'%';r.className='value '+pnlClass(roi);
+    // Show circuit breaker warning
+    const haltEl=document.getElementById('dailyHaltBadge');
+    if(haltEl)haltEl.style.display=data.dailyHalted?'inline-block':'none';
     const stockPos=(p.positions||[]).filter(x=>x.assetClass!=='crypto');
     renderPositions(document.getElementById('sPositions'),stockPos);
   }

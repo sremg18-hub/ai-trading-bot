@@ -69,6 +69,34 @@ function formatTimeUntil(target: Date): string {
 // --- Shared State ---
 const startTime = Date.now();
 let latestPortfolio: PortfolioSnapshot | null = null;
+let startingEquity = 0; // Set on first account load — baseline for total P&L
+
+// --- Daily Loss Circuit Breaker ---
+let dailyHalted = false;
+let dailyHaltDate = ''; // 'YYYY-MM-DD' in ET — resets each new day
+
+function checkDailyHalt(equity: number, lastEquity: number): boolean {
+  const et = getETNow();
+  const today = `${et.getFullYear()}-${et.getMonth()}-${et.getDate()}`;
+
+  // Reset halt at start of new trading day
+  if (dailyHaltDate !== today) {
+    dailyHalted = false;
+    dailyHaltDate = today;
+  }
+
+  if (dailyHalted) return true;
+
+  if (lastEquity > 0) {
+    const dailyLossPct = ((equity - lastEquity) / lastEquity) * 100;
+    if (dailyLossPct <= -config.maxDailyLossPercent) {
+      dailyHalted = true;
+      logger.warn(`[CIRCUIT BREAKER] Daily loss ${dailyLossPct.toFixed(2)}% exceeded limit -${config.maxDailyLossPercent}%. Halting trading for today.`);
+      return true;
+    }
+  }
+  return false;
+}
 
 // --- Stocks State ---
 let stocksBotRunning = false;
@@ -103,6 +131,7 @@ function saveState(): void {
       cryptoTrades: cryptoTrades.slice(-MAX_LOG),
       stocksTotalTrades, stocksSuccessfulTrades, stocksFailedTrades,
       cryptoTotalTrades, cryptoSuccessfulTrades, cryptoFailedTrades,
+      startingEquity,
       savedAt: new Date().toISOString(),
     };
     fs.writeFileSync(config.stateFile, JSON.stringify(state, null, 2));
@@ -124,6 +153,7 @@ function loadSavedState(): void {
     cryptoTotalTrades = state.cryptoTotalTrades || 0;
     cryptoSuccessfulTrades = state.cryptoSuccessfulTrades || 0;
     cryptoFailedTrades = state.cryptoFailedTrades || 0;
+    if (state.startingEquity > 0) startingEquity = state.startingEquity;
     logger.info(`Loaded saved state from ${config.stateFile} (saved at ${state.savedAt})`);
   } catch (err) {
     logger.warn(`Could not load saved state: ${err}`);
@@ -187,7 +217,6 @@ async function rebalanceCryptoIfOverExposed(positions: Awaited<ReturnType<typeof
   let toReduce = excess;
   for (const pos of sorted) {
     if (toReduce <= 0) break;
-    // Sell enough of this position to cover the excess
     const sellValue = Math.min(Math.abs(pos.marketValue), toReduce * 1.1);
     const sellQty = Math.round((sellValue / pos.currentPrice) * 10000) / 10000;
     if (sellQty <= 0 || pos.currentPrice <= 0) continue;
@@ -209,6 +238,12 @@ async function exitMonitorLoop(): Promise<void> {
   try {
     const [positions, account] = await Promise.all([getPositions(), getAccount()]);
 
+    // Set starting equity if not yet set
+    if (startingEquity === 0 && account.equity > 0) {
+      startingEquity = account.equity;
+      logger.info(`[INIT] Starting equity set to $${startingEquity.toFixed(2)}`);
+    }
+
     // Update portfolio so dashboard always has fresh data
     latestPortfolio = {
       timestamp: new Date(),
@@ -216,7 +251,7 @@ async function exitMonitorLoop(): Promise<void> {
       cash: account.cash,
       positions,
       dayPnl: account.equity - account.last_equity,
-      totalPnl: account.equity - 100000,
+      totalPnl: account.equity - startingEquity,
     };
 
     // Always check crypto (24/7)
@@ -236,13 +271,14 @@ async function exitMonitorLoop(): Promise<void> {
 async function updatePortfolio(): Promise<void> {
   try {
     const [account, positions] = await Promise.all([getAccount(), getPositions()]);
+    if (startingEquity === 0 && account.equity > 0) startingEquity = account.equity;
     latestPortfolio = {
       timestamp: new Date(),
       equity: account.equity,
       cash: account.cash,
       positions,
       dayPnl: account.equity - account.last_equity,
-      totalPnl: account.equity - 100000,
+      totalPnl: account.equity - startingEquity,
     };
   } catch (err) {
     logger.error(`Portfolio update failed: ${err}`);
@@ -258,50 +294,69 @@ async function runStocksCycle(): Promise<void> {
 
   try {
     const [account, positions, clock] = await Promise.all([getAccount(), getPositions(), getClock()]);
+
+    if (startingEquity === 0 && account.equity > 0) startingEquity = account.equity;
+
     const dayPnl = account.equity - account.last_equity;
     latestPortfolio = {
       timestamp: new Date(), equity: account.equity, cash: account.cash,
-      positions, dayPnl, totalPnl: account.equity - 100000,
+      positions, dayPnl, totalPnl: account.equity - startingEquity,
     };
 
-    logger.info(`Portfolio: equity=$${account.equity.toFixed(2)}, cash=$${account.cash.toFixed(2)}`);
+    // Circuit breaker: halt if daily loss limit hit
+    if (checkDailyHalt(account.equity, account.last_equity)) {
+      logger.warn('[STOCKS] Cycle skipped — daily loss limit reached');
+      return;
+    }
 
-    for (const symbol of config.tradeSymbols) {
-      try {
-        const decision = await makeDecision(symbol);
-        for (const s of decision.strategies) {
-          stocksSignals.push(s);
-          if (stocksSignals.length > MAX_LOG * 2) stocksSignals.shift();
+    logger.info(`Portfolio: equity=$${account.equity.toFixed(2)}, cash=$${account.cash.toFixed(2)}, dayPnL=${dayPnl >= 0 ? '+' : ''}$${dayPnl.toFixed(2)}`);
+
+    // Phase 1: Make ALL decisions in parallel (bars/news cached, AI cached → fast)
+    const decisions = await Promise.all(
+      config.tradeSymbols.map(async (symbol) => {
+        try {
+          return await makeDecision(symbol, positions, account);
+        } catch (err) {
+          logger.error(`[STOCKS] Decision failed for ${symbol}: ${err}`);
+          return null;
         }
+      })
+    );
 
-        const riskCheck = canTrade(decision, positions, account.equity, account.buying_power, clock.is_open);
+    // Phase 2: Execute trades sequentially (risk checks depend on running totals)
+    for (const decision of decisions) {
+      if (!decision) continue;
 
-        if (decision.action !== 'HOLD' && riskCheck.allowed) {
-          stocksTotalTrades++;
-          const tradeLog: TradeLog = {
-            id: `stock-${Date.now()}-${symbol}`, decision, orderResult: {},
-            status: 'EXECUTED', timestamp: new Date(),
-          };
-          try {
-            tradeLog.orderResult = await submitOrder(symbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
-            stocksSuccessfulTrades++;
-            logger.trade(`[STOCKS] ${decision.action} ${symbol} x${decision.quantity}`);
-          } catch (err) {
-            tradeLog.status = 'FAILED'; tradeLog.error = String(err); stocksFailedTrades++;
-          }
-          stocksTrades.push(tradeLog);
-          if (stocksTrades.length > MAX_LOG) stocksTrades.shift();
-          saveState();
-        } else if (decision.action !== 'HOLD') {
-          logger.warn(`[STOCKS] Skipped ${symbol}: ${riskCheck.reason}`);
-          stocksTrades.push({
-            id: `stock-${Date.now()}-${symbol}`, decision, orderResult: {},
-            status: 'SKIPPED', error: riskCheck.reason, timestamp: new Date(),
-          });
-          if (stocksTrades.length > MAX_LOG) stocksTrades.shift();
+      for (const s of decision.strategies) {
+        stocksSignals.push(s);
+        if (stocksSignals.length > MAX_LOG * 2) stocksSignals.shift();
+      }
+
+      const riskCheck = canTrade(decision, positions, account.equity, account.buying_power, clock.is_open);
+
+      if (decision.action !== 'HOLD' && riskCheck.allowed) {
+        stocksTotalTrades++;
+        const tradeLog: TradeLog = {
+          id: `stock-${Date.now()}-${decision.symbol}`, decision, orderResult: {},
+          status: 'EXECUTED', timestamp: new Date(),
+        };
+        try {
+          tradeLog.orderResult = await submitOrder(decision.symbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
+          stocksSuccessfulTrades++;
+          logger.trade(`[STOCKS] ${decision.action} ${decision.symbol} x${decision.quantity} @~$${decision.price.toFixed(2)}`);
+        } catch (err) {
+          tradeLog.status = 'FAILED'; tradeLog.error = String(err); stocksFailedTrades++;
         }
-      } catch (err) {
-        logger.error(`[STOCKS] Decision failed for ${symbol}: ${err}`);
+        stocksTrades.push(tradeLog);
+        if (stocksTrades.length > MAX_LOG) stocksTrades.shift();
+        saveState();
+      } else if (decision.action !== 'HOLD') {
+        logger.warn(`[STOCKS] Skipped ${decision.symbol}: ${riskCheck.reason}`);
+        stocksTrades.push({
+          id: `stock-${Date.now()}-${decision.symbol}`, decision, orderResult: {},
+          status: 'SKIPPED', error: riskCheck.reason, timestamp: new Date(),
+        });
+        if (stocksTrades.length > MAX_LOG) stocksTrades.shift();
       }
     }
     logger.info('[STOCKS] Cycle complete.');
@@ -340,68 +395,80 @@ async function runCryptoCycle(): Promise<void> {
   try {
     const [account, positions] = await Promise.all([getAccount(), getPositions()]);
     const cryptoPositions = positions.filter(p => p.assetClass === 'crypto');
+
+    if (startingEquity === 0 && account.equity > 0) startingEquity = account.equity;
+
     latestPortfolio = {
       timestamp: new Date(), equity: account.equity, cash: account.cash,
-      positions, dayPnl: account.equity - account.last_equity, totalPnl: account.equity - 100000,
+      positions, dayPnl: account.equity - account.last_equity, totalPnl: account.equity - startingEquity,
     };
 
-    for (const symbol of config.cryptoSymbols) {
-      try {
-        const decision = await makeCryptoDecision(symbol);
-        for (const s of decision.strategies) {
-          cryptoSignals.push(s);
-          if (cryptoSignals.length > MAX_LOG * 2) cryptoSignals.shift();
+    // Phase 1: Make all crypto decisions in parallel (quotes fetched per-symbol, strategies cached)
+    const decisions = await Promise.all(
+      config.cryptoSymbols.map(async (symbol) => {
+        try {
+          return await makeCryptoDecision(symbol, positions);
+        } catch (err) {
+          logger.error(`[CRYPTO] Decision failed for ${symbol}: ${err}`);
+          return null;
         }
+      })
+    );
 
-        // Normalize: config symbol is BTC/USD, position symbol is BTCUSD
-        const normalizedSymbol = symbol.replace('/', '');
-        const totalCryptoExposure = cryptoPositions.reduce((sum, p) => sum + Math.abs(p.marketValue), 0);
-        const position = cryptoPositions.find(p => p.symbol === normalizedSymbol || p.symbol === symbol);
-        const positionValue = position ? Math.abs(position.marketValue) : 0;
+    // Phase 2: Execute crypto trades sequentially
+    for (const decision of decisions) {
+      if (!decision) continue;
 
-        let allowed = true;
-        let reason = '';
+      for (const s of decision.strategies) {
+        cryptoSignals.push(s);
+        if (cryptoSignals.length > MAX_LOG * 2) cryptoSignals.shift();
+      }
 
-        if (decision.action === 'HOLD' || decision.quantity <= 0) {
+      // Normalize: config symbol is BTC/USD, position symbol is BTCUSD
+      const normalizedSymbol = decision.symbol.replace('/', '');
+      const totalCryptoExposure = cryptoPositions.reduce((sum, p) => sum + Math.abs(p.marketValue), 0);
+      const position = cryptoPositions.find(p => p.symbol === normalizedSymbol || p.symbol === decision.symbol);
+      const positionValue = position ? Math.abs(position.marketValue) : 0;
+
+      let allowed = true;
+      let reason = '';
+
+      if (decision.action === 'HOLD' || decision.quantity <= 0) {
+        allowed = false;
+        reason = 'No action needed';
+      } else if (decision.action === 'BUY') {
+        if (positionValue >= config.cryptoMaxPositionSize) {
           allowed = false;
-          reason = 'No action needed';
-        } else if (decision.action === 'BUY') {
-          if (positionValue >= config.cryptoMaxPositionSize) {
-            allowed = false;
-            reason = `Max position size reached ($${positionValue.toFixed(0)}/$${config.cryptoMaxPositionSize})`;
-          } else if (totalCryptoExposure >= config.cryptoMaxTotalExposure) {
-            allowed = false;
-            reason = `Max crypto exposure reached ($${totalCryptoExposure.toFixed(0)}/$${config.cryptoMaxTotalExposure})`;
-          }
-        } else if (decision.action === 'SELL' && (!position || position.qty <= 0)) {
+          reason = `Max position size reached ($${positionValue.toFixed(0)}/$${config.cryptoMaxPositionSize})`;
+        } else if (totalCryptoExposure >= config.cryptoMaxTotalExposure) {
           allowed = false;
-          reason = `No ${symbol} position to sell`;
+          reason = `Max crypto exposure reached ($${totalCryptoExposure.toFixed(0)}/$${config.cryptoMaxTotalExposure})`;
         }
+      } else if (decision.action === 'SELL' && (!position || position.qty <= 0)) {
+        allowed = false;
+        reason = `No ${decision.symbol} position to sell`;
+      }
 
-        if (allowed) {
-          cryptoTotalTrades++;
-          const tradeLog: TradeLog = {
-            id: `crypto-${Date.now()}-${symbol}`, decision, orderResult: {},
-            status: 'EXECUTED', timestamp: new Date(),
-          };
-          try {
-            // Use position symbol if found (Alpaca broker format), otherwise use config symbol
-            const orderSymbol = position ? position.symbol : symbol;
-            tradeLog.orderResult = await submitCryptoOrder(orderSymbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
-            cryptoSuccessfulTrades++;
-            logger.trade(`[CRYPTO] ${decision.action} ${symbol} x${decision.quantity}`);
-          } catch (err) {
-            tradeLog.status = 'FAILED'; tradeLog.error = String(err); cryptoFailedTrades++;
-            logger.error(`[CRYPTO] Order failed: ${err}`);
-          }
-          cryptoTrades.push(tradeLog);
-          if (cryptoTrades.length > MAX_LOG) cryptoTrades.shift();
-          saveState();
-        } else if (decision.action !== 'HOLD') {
-          logger.warn(`[CRYPTO] Skipped ${symbol}: ${reason}`);
+      if (allowed) {
+        cryptoTotalTrades++;
+        const tradeLog: TradeLog = {
+          id: `crypto-${Date.now()}-${decision.symbol}`, decision, orderResult: {},
+          status: 'EXECUTED', timestamp: new Date(),
+        };
+        try {
+          const orderSymbol = position ? position.symbol : decision.symbol;
+          tradeLog.orderResult = await submitCryptoOrder(orderSymbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
+          cryptoSuccessfulTrades++;
+          logger.trade(`[CRYPTO] ${decision.action} ${decision.symbol} x${decision.quantity}`);
+        } catch (err) {
+          tradeLog.status = 'FAILED'; tradeLog.error = String(err); cryptoFailedTrades++;
+          logger.error(`[CRYPTO] Order failed: ${err}`);
         }
-      } catch (err) {
-        logger.error(`[CRYPTO] Decision failed for ${symbol}: ${err}`);
+        cryptoTrades.push(tradeLog);
+        if (cryptoTrades.length > MAX_LOG) cryptoTrades.shift();
+        saveState();
+      } else if (decision.action !== 'HOLD') {
+        logger.warn(`[CRYPTO] Skipped ${decision.symbol}: ${reason}`);
       }
     }
     logger.info(`[CRYPTO] Cycle complete. Next in ${config.cryptoCheckIntervalMs / 1000}s`);
@@ -457,6 +524,7 @@ app.get('/api/status', (_req, res) => {
   res.json({
     running: stocksBotRunning,
     mode: stocksMode,
+    dailyHalted,
     etTime: et.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
     nextWake: nextWake ? `${nextWake.toLocaleDateString('en-US', { weekday: 'short' })} 9:00 AM ET (${formatTimeUntil(nextWake)})` : null,
     uptime: Date.now() - startTime,
@@ -465,6 +533,7 @@ app.get('/api/status', (_req, res) => {
     successfulTrades: stocksSuccessfulTrades,
     failedTrades: stocksFailedTrades,
     portfolio: latestPortfolio,
+    startingEquity,
     recentTrades: [...stocksTrades].reverse(),
     recentSignals: [...stocksSignals].reverse(),
   });
@@ -532,6 +601,12 @@ async function restoreState(): Promise<void> {
       getPositions(),
     ]);
 
+    // Set starting equity: use saved value if available, otherwise use current equity
+    if (startingEquity === 0) {
+      startingEquity = account.equity;
+      logger.info(`[INIT] Starting equity: $${startingEquity.toFixed(2)}`);
+    }
+
     // Restore portfolio
     latestPortfolio = {
       timestamp: new Date(),
@@ -539,11 +614,9 @@ async function restoreState(): Promise<void> {
       cash: account.cash,
       positions,
       dayPnl: account.equity - account.last_equity,
-      totalPnl: account.equity - 100000,
+      totalPnl: account.equity - startingEquity,
     };
 
-    // Alpaca orders take priority over saved file (more recent)
-    // Overwrite counts with what Alpaca reports
     let alpacaStockCount = 0;
     let alpacaCryptoCount = 0;
 
@@ -576,7 +649,6 @@ async function restoreState(): Promise<void> {
       }
     }
 
-    // Use the larger count (Alpaca vs saved file)
     if (alpacaStockCount > stocksTotalTrades) { stocksTotalTrades = alpacaStockCount; stocksSuccessfulTrades = alpacaStockCount; }
     if (alpacaCryptoCount > cryptoTotalTrades) { cryptoTotalTrades = alpacaCryptoCount; cryptoSuccessfulTrades = alpacaCryptoCount; }
 
@@ -593,9 +665,8 @@ app.listen(config.port, async () => {
     logger.info(`[CRYPTO] Symbols: ${config.cryptoSymbols.join(', ')} | 24/7 every ${config.cryptoCheckIntervalMs / 1000}s`);
   }
   logger.info(`Paper trading: ALWAYS (hardcoded)`);
-  logger.info(`Take-profit: +${config.takeProfitPercent}% | Stop-loss: -${config.stopLossPercent}% | Exit check: every ${config.exitCheckMs / 1000}s`);
+  logger.info(`Take-profit: +${config.takeProfitPercent}% | Stop-loss: -${config.stopLossPercent}% | Exit check: every ${config.exitCheckMs / 1000}s | Daily loss limit: -${config.maxDailyLossPercent}%`);
 
-  // Load persisted state first, then sync with Alpaca
   loadSavedState();
   await restoreState();
 

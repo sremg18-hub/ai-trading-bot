@@ -6,18 +6,24 @@ import { analyzeTechnical } from './strategies/technical';
 import { analyzeNews } from './strategies/ai-news';
 import { analyzeCopySignal } from './strategies/copy-trading';
 import { getRedditMentions } from './services/reddit';
-import { OrchestratorDecision, StrategyResult, signalToScore } from './types';
+import { OrchestratorDecision, StrategyResult, PositionInfo, signalToScore } from './types';
 import { logger } from './utils/logger';
 
-export async function makeDecision(symbol: string): Promise<OrchestratorDecision> {
+type CachedAccount = { equity: number; buying_power: number; last_equity: number };
+
+export async function makeDecision(
+  symbol: string,
+  cachedPositions?: PositionInfo[],
+  cachedAccount?: CachedAccount,
+): Promise<OrchestratorDecision> {
   const config = loadConfig();
 
-  // Gather data (+ Reddit in parallel, non-blocking)
+  // Use cached data when available — avoids 49 redundant API calls per cycle
   const [bars, news, positions, account, reddit] = await Promise.all([
     getHistoricalBars(symbol, 100),
     fetchRecentNews(symbol, 10),
-    getPositions(),
-    getAccount(),
+    cachedPositions ? Promise.resolve(cachedPositions) : getPositions(),
+    cachedAccount ? Promise.resolve(cachedAccount) : getAccount(),
     getRedditMentions(symbol),
   ]);
 
@@ -44,7 +50,7 @@ export async function makeDecision(symbol: string): Promise<OrchestratorDecision
     redditNote = ` | WSB:${reddit.mentions}posts(${reddit.score > 0 ? '+' : ''}${reddit.score.toFixed(2)})`;
   }
 
-  // Determine action (lower thresholds for medium-frequency trading)
+  // Determine action
   let action: 'BUY' | 'SELL' | 'HOLD';
   if (weightedScore > 0.15) {
     action = 'BUY';
@@ -54,7 +60,6 @@ export async function makeDecision(symbol: string): Promise<OrchestratorDecision
     action = 'HOLD';
   }
 
-  // Calculate confidence as absolute weighted score normalized
   const confidence = Math.min(1.0, Math.abs(weightedScore));
 
   // Calculate quantity based on confidence and max position size
@@ -64,12 +69,11 @@ export async function makeDecision(symbol: string): Promise<OrchestratorDecision
     const maxShares = Math.floor(config.maxPositionSize / price);
     quantity = Math.max(1, Math.floor(maxShares * confidence));
   } else if (action === 'BUY') {
-    // No price data — can't size the order
-    action = 'HOLD';
+    action = 'HOLD'; // No price data — can't size
   } else if (action === 'SELL') {
     const position = positions.find(p => p.symbol === symbol);
-    if (position) {
-      quantity = Math.max(1, Math.floor(position.qty * confidence));
+    if (position && position.qty > 0) {
+      quantity = position.qty; // Always sell full position — don't leave partial losers
     }
   }
 
