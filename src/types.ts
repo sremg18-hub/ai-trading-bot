@@ -13,6 +13,7 @@ export interface OrchestratorDecision {
   symbol: string;
   action: 'BUY' | 'SELL' | 'HOLD';
   quantity: number;
+  price: number; // estimated price used for sizing
   confidence: number;
   strategies: StrategyResult[];
   reasoning: string;

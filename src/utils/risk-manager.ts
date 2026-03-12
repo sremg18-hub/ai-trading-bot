@@ -31,8 +31,8 @@ export function canTrade(
     const existingPosition = positions.find(p => p.symbol === decision.symbol);
     const existingValue = existingPosition ? existingPosition.marketValue : 0;
 
-    // Estimate order cost (rough — use latest price from position or assume $100)
-    const estimatedPrice = existingPosition ? existingPosition.currentPrice : 100;
+    // Use real price from orchestrator decision, fallback to position price
+    const estimatedPrice = decision.price > 0 ? decision.price : (existingPosition ? existingPosition.currentPrice : 100);
     const orderCost = decision.quantity * estimatedPrice;
 
     // Check position size limit

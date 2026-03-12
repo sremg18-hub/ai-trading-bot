@@ -549,13 +549,14 @@ async function restoreState(): Promise<void> {
 
     for (const order of orders) {
       if (order.status !== 'filled' && order.status !== 'partially_filled') continue;
-      const isCrypto = order.symbol.includes('/') || order.symbol.match(/^(BTC|ETH|SOL|DOGE|AVAX|LINK|LTC|BCH|SHIB|UNI|XRP|AAVE|DOT|MATIC|ADA|ALGO|ATOM|CRV|GRT|MKR|SUSHI|BAT|COMP|SNX|YFI|BAL|LRC|XTZ|FIL|ZRX)USD$/i) !== null;
+      const isCrypto = order.symbol.includes('/') || order.symbol.match(/^(BTC|ETH|SOL|DOGE|AVAX|LINK|LTC|BCH|SHIB|UNI|XRP|AAVE|DOT|MATIC|ADA|ALGO|ATOM|CRV|GRT|MKR|SUSHI|BAT|COMP|SNX|YFI|BAL|LRC|XTZ|FIL|ZRX|BNB|HBAR|ICP|JUP|STX|TRX|BONK|INJ|FLOKI|VET|NEAR|JASMY|OP|WIF|TON|ONDO|PEPE|ARB|APT)USD$/i) !== null;
       const tradeLog: TradeLog = {
         id: order.id,
         decision: {
           symbol: order.symbol,
           action: order.side === 'buy' ? 'BUY' : 'SELL',
           quantity: order.filled_qty,
+          price: order.filled_avg_price || 0,
           confidence: 0,
           strategies: [],
           reasoning: `Restored from Alpaca history — filled @ $${order.filled_avg_price}`,

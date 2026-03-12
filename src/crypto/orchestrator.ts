@@ -48,9 +48,10 @@ export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDe
   const normalizedSymbol = symbol.replace('/', '');
 
   // Skip symbols with no usable market data
+  const currentPriceNum = quote ? quote.mid : 0;
   if (bars.length === 0 && !quote) {
     return {
-      symbol, action: 'HOLD', quantity: 0, confidence: 0,
+      symbol, action: 'HOLD', quantity: 0, price: 0, confidence: 0,
       strategies, reasoning: 'No market data available',
       timestamp: new Date(),
     };
@@ -58,10 +59,10 @@ export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDe
 
   // Calculate quantity — crypto can be fractional
   let quantity = 0;
-  if (action === 'BUY' && quote && quote.mid > 0) {
+  if (action === 'BUY' && currentPriceNum > 0) {
     const maxValue = config.cryptoMaxPositionSize * confidence;
-    quantity = Math.round((maxValue / quote.mid) * 10000) / 10000; // 4 decimal places
-    if (quantity * quote.mid < 1) quantity = 0; // min $1 order
+    quantity = Math.round((maxValue / currentPriceNum) * 10000) / 10000; // 4 decimal places
+    if (quantity * currentPriceNum < 1) quantity = 0; // min $1 order
   } else if (action === 'BUY') {
     // No valid price — can't size the order
     action = 'HOLD';
@@ -73,7 +74,7 @@ export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDe
     }
   }
 
-  const currentPrice = quote ? quote.mid.toFixed(2) : '?';
+  const currentPrice = currentPriceNum > 0 ? currentPriceNum.toFixed(2) : '?';
   const reasoning = strategies
     .map(s => `${s.strategy}: ${s.signal}(${s.confidence.toFixed(2)})`)
     .join(' + ') + ` → score=${weightedScore.toFixed(3)} @$${currentPrice}`;
@@ -84,6 +85,7 @@ export async function makeCryptoDecision(symbol: string): Promise<OrchestratorDe
     symbol,
     action,
     quantity,
+    price: currentPriceNum,
     confidence,
     strategies,
     reasoning,

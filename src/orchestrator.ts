@@ -58,11 +58,14 @@ export async function makeDecision(symbol: string): Promise<OrchestratorDecision
   const confidence = Math.min(1.0, Math.abs(weightedScore));
 
   // Calculate quantity based on confidence and max position size
+  const price = bars.length > 0 ? bars[bars.length - 1].close : 0;
   let quantity = 0;
-  if (action === 'BUY') {
-    const price = bars.length > 0 ? bars[bars.length - 1].close : 100;
+  if (action === 'BUY' && price > 0) {
     const maxShares = Math.floor(config.maxPositionSize / price);
     quantity = Math.max(1, Math.floor(maxShares * confidence));
+  } else if (action === 'BUY') {
+    // No price data — can't size the order
+    action = 'HOLD';
   } else if (action === 'SELL') {
     const position = positions.find(p => p.symbol === symbol);
     if (position) {
@@ -74,12 +77,13 @@ export async function makeDecision(symbol: string): Promise<OrchestratorDecision
     .map(s => `${s.strategy}: ${s.signal}(${s.confidence.toFixed(2)})`)
     .join(' + ') + ` → score=${weightedScore.toFixed(3)}${redditNote}`;
 
-  logger.info(`[ORCHESTRATOR] ${symbol}: ${action} x${quantity} (score: ${weightedScore.toFixed(3)}) — ${reasoning}`);
+  logger.info(`[ORCHESTRATOR] ${symbol}: ${action} x${quantity} @$${price.toFixed(2)} (score: ${weightedScore.toFixed(3)}) — ${reasoning}`);
 
   return {
     symbol,
     action,
     quantity,
+    price,
     confidence,
     strategies,
     reasoning,
