@@ -210,6 +210,44 @@ export async function submitCryptoOrder(
   }
 }
 
+export interface AlpacaOrder {
+  id: string;
+  symbol: string;
+  qty: number;
+  side: 'buy' | 'sell';
+  status: string;
+  filled_qty: number;
+  filled_avg_price: number;
+  created_at: string;
+}
+
+export async function getRecentOrders(limit: number = 50): Promise<AlpacaOrder[]> {
+  try {
+    const orders = await alpaca.getOrders({
+      status: 'closed',
+      limit,
+      direction: 'desc',
+      until: undefined,
+      after: undefined,
+      nested: undefined,
+      symbols: undefined,
+    } as Parameters<typeof alpaca.getOrders>[0]);
+    return orders.map((o: Record<string, string>) => ({
+      id: o.id,
+      symbol: o.symbol,
+      qty: parseFloat(o.qty || '0'),
+      side: o.side as 'buy' | 'sell',
+      status: o.status,
+      filled_qty: parseFloat(o.filled_qty || '0'),
+      filled_avg_price: parseFloat(o.filled_avg_price || '0'),
+      created_at: o.created_at,
+    }));
+  } catch (err) {
+    logger.error(`Failed to get recent orders: ${err}`);
+    return [];
+  }
+}
+
 export async function getClock(): Promise<{ is_open: boolean; next_open: string; next_close: string }> {
   try {
     const clock = await alpaca.getClock();

@@ -5,7 +5,7 @@ import { loadConfig, validateConfig } from './config';
 import { BotStatus, TradeLog, StrategyResult, PortfolioSnapshot } from './types';
 import { makeDecision } from './orchestrator';
 import { makeCryptoDecision } from './crypto/orchestrator';
-import { getAccount, getPositions, submitOrder, submitCryptoOrder, getClock } from './services/alpaca';
+import { getAccount, getPositions, submitOrder, submitCryptoOrder, getClock, getRecentOrders } from './services/alpaca';
 import { canTrade } from './utils/risk-manager';
 import { logger } from './utils/logger';
 
@@ -374,13 +374,71 @@ if (config.perplexityApiKey) {
   logger.warn('No AI API keys set — AI strategies will return HOLD');
 }
 
-app.listen(config.port, () => {
+async function restoreState(): Promise<void> {
+  logger.info('Restoring state from Alpaca...');
+  try {
+    const [orders, account, positions] = await Promise.all([
+      getRecentOrders(50),
+      getAccount(),
+      getPositions(),
+    ]);
+
+    // Restore portfolio
+    latestPortfolio = {
+      timestamp: new Date(),
+      equity: account.equity,
+      cash: account.cash,
+      positions,
+      dayPnl: account.equity - account.last_equity,
+      totalPnl: account.equity - 100000,
+    };
+
+    // Restore trade logs from filled orders
+    for (const order of orders) {
+      if (order.status !== 'filled' && order.status !== 'partially_filled') continue;
+      const isCrypto = order.symbol.includes('/');
+      const tradeLog: TradeLog = {
+        id: order.id,
+        decision: {
+          symbol: order.symbol,
+          action: order.side === 'buy' ? 'BUY' : 'SELL',
+          quantity: order.filled_qty,
+          confidence: 0,
+          strategies: [],
+          reasoning: `Restored from Alpaca history — filled @ $${order.filled_avg_price}`,
+          timestamp: new Date(order.created_at),
+        },
+        orderResult: order as unknown as Record<string, unknown>,
+        status: 'EXECUTED',
+        timestamp: new Date(order.created_at),
+      };
+
+      if (isCrypto) {
+        cryptoTrades.push(tradeLog);
+        cryptoTotalTrades++;
+        cryptoSuccessfulTrades++;
+      } else {
+        stocksTrades.push(tradeLog);
+        stocksTotalTrades++;
+        stocksSuccessfulTrades++;
+      }
+    }
+
+    logger.info(`State restored: ${stocksTotalTrades} stock orders, ${cryptoTotalTrades} crypto orders, ${positions.length} open positions`);
+  } catch (err) {
+    logger.error(`Failed to restore state: ${err}`);
+  }
+}
+
+app.listen(config.port, async () => {
   logger.info(`Dashboard running at http://localhost:${config.port}`);
   logger.info(`[STOCKS] Symbols: ${config.tradeSymbols.join(', ')} | Schedule: 9:00 AM–4:00 PM ET`);
   if (config.cryptoEnabled) {
     logger.info(`[CRYPTO] Symbols: ${config.cryptoSymbols.join(', ')} | 24/7 every ${config.cryptoCheckIntervalMs / 1000}s`);
   }
   logger.info(`Paper trading: ALWAYS (hardcoded)`);
+
+  await restoreState();
 
   startStocks();
   if (config.cryptoEnabled) startCrypto();
