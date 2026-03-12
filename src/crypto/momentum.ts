@@ -1,6 +1,9 @@
 import { CryptoBar } from '../services/alpaca';
 import { Signal, StrategyResult } from '../types';
 import { logger } from '../utils/logger';
+import { getFearGreedIndex, fearGreedToScore } from '../services/fear-greed';
+import { getCoinMarketData, coinDataToScore } from '../services/coingecko';
+import { loadConfig } from '../config';
 
 // Volume-Weighted Momentum strategy for crypto
 // Analyzes: volume spikes, VWAP deviation, trade count momentum
@@ -138,6 +141,26 @@ export async function analyzeMomentum(symbol: string, bars: CryptoBar[]): Promis
       analyzePriceMomentum(bars),
       analyzeTradeActivity(bars),
     ];
+
+    // --- Fear & Greed Index (contrarian market-wide signal) ---
+    const fearGreed = await getFearGreedIndex();
+    if (fearGreed) {
+      const fgScore = fearGreedToScore(fearGreed);
+      subSignals.push({
+        name: 'F&G',
+        score: fgScore,
+        detail: `Fear&Greed=${fearGreed.value}(${fearGreed.classification})`,
+      });
+    }
+
+    // --- CoinGecko market data (24h change, 7d trend, market cap rank) ---
+    const config = loadConfig();
+    const coinDataMap = await getCoinMarketData(config.cryptoSymbols);
+    const coinData = coinDataMap.get(symbol);
+    if (coinData) {
+      const { score: cgScore, detail: cgDetail } = coinDataToScore(coinData);
+      subSignals.push({ name: 'CG', score: cgScore, detail: cgDetail });
+    }
 
     const avgScore = subSignals.reduce((sum, s) => sum + s.score, 0) / subSignals.length;
     const agreeing = subSignals.filter(s =>
