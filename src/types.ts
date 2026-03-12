@@ -45,6 +45,7 @@ export interface PositionInfo {
   marketValue: number;
   unrealizedPnl: number;
   unrealizedPnlPercent: number;
+  assetClass: string; // 'us_equity' | 'crypto'
 }
 
 export interface BotStatus {

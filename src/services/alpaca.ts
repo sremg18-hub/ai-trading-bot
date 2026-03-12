@@ -56,6 +56,7 @@ export async function getPositions(): Promise<PositionInfo[]> {
       marketValue: parseFloat(p.market_value),
       unrealizedPnl: parseFloat(p.unrealized_pl),
       unrealizedPnlPercent: parseFloat(p.unrealized_plpc) * 100,
+      assetClass: p.asset_class || 'us_equity',
     }));
   } catch (err) {
     logger.error(`Failed to get positions: ${err}`);

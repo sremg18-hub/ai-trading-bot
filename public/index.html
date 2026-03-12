@@ -66,7 +66,7 @@
     .schedule-bar .next-wake{color:var(--yellow)}
     .log-line{padding:.2rem .75rem;font-size:.7rem;color:var(--text-dim);border-bottom:1px solid rgba(30,41,59,.3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .log-line.TRADE{color:var(--green)}.log-line.ERROR{color:var(--red)}.log-line.WARN{color:var(--yellow)}.log-line.SIGNAL{color:var(--purple)}
-    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.panels{grid-template-columns:1fr}}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr) !important}.panels{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -79,11 +79,12 @@
   </div>
 
   <!-- Portfolio (shared) -->
-  <div class="grid">
+  <div class="grid" style="grid-template-columns:repeat(5,1fr)">
     <div class="card"><div class="label">Equity</div><div class="value" id="equity">$--</div></div>
     <div class="card"><div class="label">Cash</div><div class="value" id="cash">$--</div></div>
     <div class="card"><div class="label">Day P&L</div><div class="value" id="dayPnl">$--</div></div>
     <div class="card"><div class="label">Total P&L</div><div class="value" id="totalPnl">$--</div></div>
+    <div class="card"><div class="label">ROI</div><div class="value" id="totalRoi">--%</div></div>
   </div>
 
   <!-- Tabs -->
@@ -174,7 +175,9 @@ function updateStocks(data){
     document.getElementById('cash').textContent=fmt(p.cash);
     const d=document.getElementById('dayPnl');d.textContent=(p.dayPnl>=0?'+':'')+fmt(p.dayPnl);d.className='value '+pnlClass(p.dayPnl);
     const t=document.getElementById('totalPnl');t.textContent=(p.totalPnl>=0?'+':'')+fmt(p.totalPnl);t.className='value '+pnlClass(p.totalPnl);
-    const stockPos=(p.positions||[]).filter(x=>!x.symbol.includes('/'));
+    const roi=p.totalPnl/100000*100;
+    const r=document.getElementById('totalRoi');r.textContent=(roi>=0?'+':'')+roi.toFixed(3)+'%';r.className='value '+pnlClass(roi);
+    const stockPos=(p.positions||[]).filter(x=>x.assetClass!=='crypto');
     renderPositions(document.getElementById('sPositions'),stockPos);
   }
   document.getElementById('sTotalTrades').textContent=data.totalTrades;

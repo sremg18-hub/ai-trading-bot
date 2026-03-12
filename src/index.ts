@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import { loadConfig, validateConfig } from './config';
 import { BotStatus, TradeLog, StrategyResult, PortfolioSnapshot } from './types';
 import { makeDecision } from './orchestrator';
@@ -90,7 +91,47 @@ let cryptoFailedTrades = 0;
 const cryptoTrades: TradeLog[] = [];
 const cryptoSignals: StrategyResult[] = [];
 
-const MAX_LOG = 50;
+const MAX_LOG = 100;
+
+// --- Persistent State ---
+function saveState(): void {
+  try {
+    const dir = path.dirname(config.stateFile);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    const state = {
+      stocksTrades: stocksTrades.slice(-MAX_LOG),
+      cryptoTrades: cryptoTrades.slice(-MAX_LOG),
+      stocksTotalTrades, stocksSuccessfulTrades, stocksFailedTrades,
+      cryptoTotalTrades, cryptoSuccessfulTrades, cryptoFailedTrades,
+      savedAt: new Date().toISOString(),
+    };
+    fs.writeFileSync(config.stateFile, JSON.stringify(state, null, 2));
+  } catch {
+    // Silently skip if path not available (local dev without /data)
+  }
+}
+
+function loadSavedState(): void {
+  try {
+    if (!fs.existsSync(config.stateFile)) return;
+    const raw = fs.readFileSync(config.stateFile, 'utf-8');
+    const state = JSON.parse(raw);
+    if (state.stocksTrades) stocksTrades.push(...state.stocksTrades);
+    if (state.cryptoTrades) cryptoTrades.push(...state.cryptoTrades);
+    stocksTotalTrades = state.stocksTotalTrades || 0;
+    stocksSuccessfulTrades = state.stocksSuccessfulTrades || 0;
+    stocksFailedTrades = state.stocksFailedTrades || 0;
+    cryptoTotalTrades = state.cryptoTotalTrades || 0;
+    cryptoSuccessfulTrades = state.cryptoSuccessfulTrades || 0;
+    cryptoFailedTrades = state.cryptoFailedTrades || 0;
+    logger.info(`Loaded saved state from ${config.stateFile} (saved at ${state.savedAt})`);
+  } catch (err) {
+    logger.warn(`Could not load saved state: ${err}`);
+  }
+}
+
+// Save state every minute
+setInterval(saveState, 60000);
 
 // --- Helper: take-profit / stop-loss auto-exit ---
 async function checkPositionExits(positions: ReturnType<typeof getPositions> extends Promise<infer T> ? T : never, isCrypto: boolean): Promise<void> {
@@ -98,7 +139,7 @@ async function checkPositionExits(positions: ReturnType<typeof getPositions> ext
   const sl = config.stopLossPercent;
 
   for (const pos of positions) {
-    const isCryptoPos = pos.symbol.includes('/');
+    const isCryptoPos = pos.assetClass === 'crypto';
     if (isCryptoPos !== isCrypto) continue;
     if (pos.qty <= 0) continue;
 
@@ -106,9 +147,9 @@ async function checkPositionExits(positions: ReturnType<typeof getPositions> ext
     let reason = '';
 
     if (pnlPct >= tp) {
-      reason = `Take-profit: +${pnlPct.toFixed(1)}% >= +${tp}%`;
+      reason = `Take-profit: +${pnlPct.toFixed(2)}% >= +${tp}%`;
     } else if (pnlPct <= -sl) {
-      reason = `Stop-loss: ${pnlPct.toFixed(1)}% <= -${sl}%`;
+      reason = `Stop-loss: ${pnlPct.toFixed(2)}% <= -${sl}%`;
     }
 
     if (!reason) continue;
@@ -122,10 +163,25 @@ async function checkPositionExits(positions: ReturnType<typeof getPositions> ext
         await submitOrder(pos.symbol, pos.qty, 'sell');
         stocksTotalTrades++; stocksSuccessfulTrades++;
       }
+      saveState();
     } catch (err) {
       logger.error(`[EXIT] Failed to close ${pos.symbol}: ${err}`);
     }
   }
+}
+
+// --- Fast Exit Monitor — runs every EXIT_CHECK_MS (default 30s) independently ---
+async function exitMonitorLoop(): Promise<void> {
+  try {
+    const positions = await getPositions();
+    // Always check crypto (24/7)
+    if (cryptoBotRunning) await checkPositionExits(positions, true);
+    // Check stocks only during market hours
+    if (stocksBotRunning && stocksMode === 'ACTIVE') await checkPositionExits(positions, false);
+  } catch (err) {
+    logger.error(`[EXIT_MONITOR] Error: ${err}`);
+  }
+  setTimeout(exitMonitorLoop, config.exitCheckMs);
 }
 
 // --- Helper: update portfolio ---
@@ -162,9 +218,6 @@ async function runStocksCycle(): Promise<void> {
 
     logger.info(`Portfolio: equity=$${account.equity.toFixed(2)}, cash=$${account.cash.toFixed(2)}`);
 
-    // Check take-profit / stop-loss before new signals
-    if (clock.is_open) await checkPositionExits(positions, false);
-
     for (const symbol of config.tradeSymbols) {
       try {
         const decision = await makeDecision(symbol);
@@ -190,6 +243,7 @@ async function runStocksCycle(): Promise<void> {
           }
           stocksTrades.push(tradeLog);
           if (stocksTrades.length > MAX_LOG) stocksTrades.shift();
+          saveState();
         } else if (decision.action !== 'HOLD') {
           logger.warn(`[STOCKS] Skipped ${symbol}: ${riskCheck.reason}`);
           stocksTrades.push({
@@ -237,10 +291,11 @@ async function runCryptoCycle(): Promise<void> {
 
   try {
     const [account, positions] = await Promise.all([getAccount(), getPositions()]);
-    const cryptoPositions = positions.filter(p => p.symbol.includes('/'));
-
-    // Check take-profit / stop-loss before new signals
-    await checkPositionExits(positions, true);
+    const cryptoPositions = positions.filter(p => p.assetClass === 'crypto');
+    latestPortfolio = {
+      timestamp: new Date(), equity: account.equity, cash: account.cash,
+      positions, dayPnl: account.equity - account.last_equity, totalPnl: account.equity - 100000,
+    };
 
     for (const symbol of config.cryptoSymbols) {
       try {
@@ -250,9 +305,10 @@ async function runCryptoCycle(): Promise<void> {
           if (cryptoSignals.length > MAX_LOG * 2) cryptoSignals.shift();
         }
 
-        // Crypto risk check — simplified (always "open")
+        // Normalize: config symbol is BTC/USD, position symbol is BTCUSD
+        const normalizedSymbol = symbol.replace('/', '');
         const totalCryptoExposure = cryptoPositions.reduce((sum, p) => sum + Math.abs(p.marketValue), 0);
-        const position = cryptoPositions.find(p => p.symbol === symbol);
+        const position = cryptoPositions.find(p => p.symbol === normalizedSymbol || p.symbol === symbol);
         const positionValue = position ? Math.abs(position.marketValue) : 0;
 
         let allowed = true;
@@ -281,7 +337,9 @@ async function runCryptoCycle(): Promise<void> {
             status: 'EXECUTED', timestamp: new Date(),
           };
           try {
-            tradeLog.orderResult = await submitCryptoOrder(symbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
+            // Use position symbol if found (Alpaca broker format), otherwise use config symbol
+            const orderSymbol = position ? position.symbol : symbol;
+            tradeLog.orderResult = await submitCryptoOrder(orderSymbol, decision.quantity, decision.action === 'BUY' ? 'buy' : 'sell') as Record<string, unknown>;
             cryptoSuccessfulTrades++;
             logger.trade(`[CRYPTO] ${decision.action} ${symbol} x${decision.quantity}`);
           } catch (err) {
@@ -290,6 +348,7 @@ async function runCryptoCycle(): Promise<void> {
           }
           cryptoTrades.push(tradeLog);
           if (cryptoTrades.length > MAX_LOG) cryptoTrades.shift();
+          saveState();
         } else if (decision.action !== 'HOLD') {
           logger.warn(`[CRYPTO] Skipped ${symbol}: ${reason}`);
         }
@@ -392,7 +451,7 @@ app.get('/api/crypto/status', (_req, res) => {
     failedTrades: cryptoFailedTrades,
     recentTrades: [...cryptoTrades].reverse(),
     recentSignals: [...cryptoSignals].reverse(),
-    positions: latestPortfolio?.positions.filter(p => p.symbol.includes('/')) || [],
+    positions: latestPortfolio?.positions.filter(p => p.assetClass === 'crypto') || [],
   });
 });
 
@@ -435,10 +494,14 @@ async function restoreState(): Promise<void> {
       totalPnl: account.equity - 100000,
     };
 
-    // Restore trade logs from filled orders
+    // Alpaca orders take priority over saved file (more recent)
+    // Overwrite counts with what Alpaca reports
+    let alpacaStockCount = 0;
+    let alpacaCryptoCount = 0;
+
     for (const order of orders) {
       if (order.status !== 'filled' && order.status !== 'partially_filled') continue;
-      const isCrypto = order.symbol.includes('/');
+      const isCrypto = order.symbol.includes('/') || order.symbol.match(/^(BTC|ETH|SOL|DOGE|AVAX|LINK|LTC|BCH|SHIB|UNI|XRP|AAVE|DOT|MATIC|ADA|ALGO|ATOM|CRV|GRT|MKR|SUSHI|BAT|COMP|SNX|YFI|BAL|LRC|XTZ|FIL|ZRX)USD$/i) !== null;
       const tradeLog: TradeLog = {
         id: order.id,
         decision: {
@@ -457,14 +520,16 @@ async function restoreState(): Promise<void> {
 
       if (isCrypto) {
         cryptoTrades.push(tradeLog);
-        cryptoTotalTrades++;
-        cryptoSuccessfulTrades++;
+        alpacaCryptoCount++;
       } else {
         stocksTrades.push(tradeLog);
-        stocksTotalTrades++;
-        stocksSuccessfulTrades++;
+        alpacaStockCount++;
       }
     }
+
+    // Use the larger count (Alpaca vs saved file)
+    if (alpacaStockCount > stocksTotalTrades) { stocksTotalTrades = alpacaStockCount; stocksSuccessfulTrades = alpacaStockCount; }
+    if (alpacaCryptoCount > cryptoTotalTrades) { cryptoTotalTrades = alpacaCryptoCount; cryptoSuccessfulTrades = alpacaCryptoCount; }
 
     logger.info(`State restored: ${stocksTotalTrades} stock orders, ${cryptoTotalTrades} crypto orders, ${positions.length} open positions`);
   } catch (err) {
@@ -479,8 +544,14 @@ app.listen(config.port, async () => {
     logger.info(`[CRYPTO] Symbols: ${config.cryptoSymbols.join(', ')} | 24/7 every ${config.cryptoCheckIntervalMs / 1000}s`);
   }
   logger.info(`Paper trading: ALWAYS (hardcoded)`);
+  logger.info(`Take-profit: +${config.takeProfitPercent}% | Stop-loss: -${config.stopLossPercent}% | Exit check: every ${config.exitCheckMs / 1000}s`);
 
+  // Load persisted state first, then sync with Alpaca
+  loadSavedState();
   await restoreState();
+
+  // Start fast exit monitor
+  setTimeout(exitMonitorLoop, config.exitCheckMs);
 
   startStocks();
   if (config.cryptoEnabled) startCrypto();

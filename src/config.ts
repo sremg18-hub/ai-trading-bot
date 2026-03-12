@@ -24,6 +24,8 @@ export interface Config {
   cryptoWeightTechnical: number;
   cryptoWeightAiNews: number;
   cryptoWeightMomentum: number;
+  exitCheckMs: number;   // How often to scan for TP/SL exits (ms)
+  stateFile: string;     // Path to persist state (for Coolify volume)
 }
 
 export function loadConfig(): Config {
@@ -53,6 +55,8 @@ export function loadConfig(): Config {
     cryptoWeightTechnical: Number(process.env.CRYPTO_WEIGHT_TECHNICAL) || 0.40,
     cryptoWeightAiNews: Number(process.env.CRYPTO_WEIGHT_AI_NEWS) || 0.30,
     cryptoWeightMomentum: Number(process.env.CRYPTO_WEIGHT_MOMENTUM) || 0.30,
+    exitCheckMs: Number(process.env.EXIT_CHECK_MS) || 30000,
+    stateFile: process.env.STATE_FILE || '/data/state.json',
   };
 }
 
