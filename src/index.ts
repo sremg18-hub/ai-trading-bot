@@ -207,7 +207,18 @@ async function rebalanceCryptoIfOverExposed(positions: Awaited<ReturnType<typeof
 // --- Fast Exit Monitor — runs every EXIT_CHECK_MS (default 30s) independently ---
 async function exitMonitorLoop(): Promise<void> {
   try {
-    const positions = await getPositions();
+    const [positions, account] = await Promise.all([getPositions(), getAccount()]);
+
+    // Update portfolio so dashboard always has fresh data
+    latestPortfolio = {
+      timestamp: new Date(),
+      equity: account.equity,
+      cash: account.cash,
+      positions,
+      dayPnl: account.equity - account.last_equity,
+      totalPnl: account.equity - 100000,
+    };
+
     // Always check crypto (24/7)
     if (cryptoBotRunning) {
       await checkPositionExits(positions, true);
