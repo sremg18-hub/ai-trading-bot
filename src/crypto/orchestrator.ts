@@ -35,11 +35,11 @@ export async function makeCryptoDecision(
     signalToScore(sentiment.signal) * config.cryptoWeightAiNews * sentiment.confidence +
     signalToScore(momentum.signal) * config.cryptoWeightMomentum * momentum.confidence;
 
-  // Lower thresholds for medium-frequency trading
+  // AGGRESSIVE SCALPING: Very low thresholds for high-frequency crypto trading
   let action: 'BUY' | 'SELL' | 'HOLD';
-  if (weightedScore > 0.04) {
+  if (weightedScore > 0.03) {
     action = 'BUY';
-  } else if (weightedScore < -0.04) {
+  } else if (weightedScore < -0.03) {
     action = 'SELL';
   } else {
     action = 'HOLD';
@@ -60,10 +60,11 @@ export async function makeCryptoDecision(
     };
   }
 
-  // Calculate quantity — crypto can be fractional
+  // AGGRESSIVE: Calculate quantity with minimum 60% position size
   let quantity = 0;
   if (action === 'BUY' && currentPriceNum > 0) {
-    const maxValue = config.cryptoMaxPositionSize * confidence;
+    const positionScale = 0.6 + (confidence * 0.4); // Min 60%, max 100%
+    const maxValue = config.cryptoMaxPositionSize * positionScale;
     quantity = Math.round((maxValue / currentPriceNum) * 10000) / 10000; // 4 decimal places
     if (quantity * currentPriceNum < 1) quantity = 0; // min $1 order
   } else if (action === 'BUY') {

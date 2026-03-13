@@ -50,11 +50,11 @@ export async function makeDecision(
     redditNote = ` | WSB:${reddit.mentions}posts(${reddit.score > 0 ? '+' : ''}${reddit.score.toFixed(2)})`;
   }
 
-  // Determine action
+  // Determine action - AGGRESSIVE SCALPING: lower thresholds for more trades
   let action: 'BUY' | 'SELL' | 'HOLD';
-  if (weightedScore > 0.15) {
+  if (weightedScore > 0.05) {
     action = 'BUY';
-  } else if (weightedScore < -0.15) {
+  } else if (weightedScore < -0.05) {
     action = 'SELL';
   } else {
     action = 'HOLD';
@@ -62,18 +62,20 @@ export async function makeDecision(
 
   const confidence = Math.min(1.0, Math.abs(weightedScore));
 
-  // Calculate quantity based on confidence and max position size
+  // Calculate quantity - AGGRESSIVE: scale in with confidence, but minimum 50% position
   const price = bars.length > 0 ? bars[bars.length - 1].close : 0;
   let quantity = 0;
   if (action === 'BUY' && price > 0) {
     const maxShares = Math.floor(config.maxPositionSize / price);
-    quantity = Math.max(1, Math.floor(maxShares * confidence));
+    // Minimum 50% of max position to ensure meaningful trades, scale up with confidence
+    const positionScale = 0.5 + (confidence * 0.5);
+    quantity = Math.max(1, Math.floor(maxShares * positionScale));
   } else if (action === 'BUY') {
     action = 'HOLD'; // No price data — can't size
   } else if (action === 'SELL') {
     const position = positions.find(p => p.symbol === symbol);
     if (position && position.qty > 0) {
-      quantity = position.qty; // Always sell full position — don't leave partial losers
+      quantity = position.qty; // Full exit for scalping
     }
   }
 

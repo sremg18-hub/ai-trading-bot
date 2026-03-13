@@ -15,10 +15,13 @@ function analyzeRSI(closes: number[]): SubSignal {
 
   const current = rsiValues[rsiValues.length - 1];
 
-  if (current < 25) return { name: 'RSI', score: 1.0, detail: `RSI=${current.toFixed(1)} (strongly oversold)` };
-  if (current < 30) return { name: 'RSI', score: 0.5, detail: `RSI=${current.toFixed(1)} (oversold)` };
-  if (current > 75) return { name: 'RSI', score: -1.0, detail: `RSI=${current.toFixed(1)} (strongly overbought)` };
-  if (current > 70) return { name: 'RSI', score: -0.5, detail: `RSI=${current.toFixed(1)} (overbought)` };
+  // AGGRESSIVE: More sensitive RSI thresholds for scalping
+  if (current < 30) return { name: 'RSI', score: 1.0, detail: `RSI=${current.toFixed(1)} (strongly oversold)` };
+  if (current < 40) return { name: 'RSI', score: 0.6, detail: `RSI=${current.toFixed(1)} (oversold)` };
+  if (current < 45) return { name: 'RSI', score: 0.3, detail: `RSI=${current.toFixed(1)} (slightly oversold)` };
+  if (current > 70) return { name: 'RSI', score: -1.0, detail: `RSI=${current.toFixed(1)} (strongly overbought)` };
+  if (current > 60) return { name: 'RSI', score: -0.6, detail: `RSI=${current.toFixed(1)} (overbought)` };
+  if (current > 55) return { name: 'RSI', score: -0.3, detail: `RSI=${current.toFixed(1)} (slightly overbought)` };
   return { name: 'RSI', score: 0, detail: `RSI=${current.toFixed(1)} (neutral)` };
 }
 
@@ -106,10 +109,11 @@ function analyzeMACD(closes: number[]): SubSignal {
 }
 
 function scoreToSignal(score: number): Signal {
-  if (score >= 0.6) return 'STRONG_BUY';
-  if (score >= 0.2) return 'BUY';
-  if (score <= -0.6) return 'STRONG_SELL';
-  if (score <= -0.2) return 'SELL';
+  // AGGRESSIVE SCALPING: Lower thresholds for more frequent signals
+  if (score >= 0.4) return 'STRONG_BUY';
+  if (score >= 0.1) return 'BUY';
+  if (score <= -0.4) return 'STRONG_SELL';
+  if (score <= -0.1) return 'SELL';
   return 'HOLD';
 }
 
@@ -135,14 +139,16 @@ export async function analyzeTechnical(symbol: string, bars: BarData[]): Promise
       analyzeMACD(closes),
     ];
 
-    // Average score
-    const avgScore = subSignals.reduce((sum, s) => sum + s.score, 0) / subSignals.length;
+    // AGGRESSIVE: Weighted score with more emphasis on recent signals
+    const weights = [1.0, 1.0, 0.8, 0.8]; // RSI, EMA, BB, MACD
+    const weightedSum = subSignals.reduce((sum, s, i) => sum + s.score * (weights[i] || 1), 0);
+    const avgScore = weightedSum / subSignals.length;
 
-    // Confidence: how many indicators agree on direction
+    // AGGRESSIVE: Higher base confidence to encourage more trades
     const agreeing = subSignals.filter(s =>
       (avgScore > 0 && s.score > 0) || (avgScore < 0 && s.score < 0) || (avgScore === 0 && s.score === 0)
     ).length;
-    const confidence = Math.min(1.0, (agreeing / subSignals.length) * Math.abs(avgScore) + 0.1);
+    const confidence = Math.min(1.0, (agreeing / subSignals.length) * Math.abs(avgScore) + 0.25);
 
     const signal = scoreToSignal(avgScore);
     const reasoning = subSignals.map(s => `${s.name}: ${s.detail}`).join(' | ');

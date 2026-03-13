@@ -25,7 +25,7 @@ const PRE_MARKET_HOUR = 9;
 const MARKET_OPEN_HOUR = 9;
 const MARKET_OPEN_MIN = 30;
 const MARKET_CLOSE_HOUR = 16;
-const SLEEP_CHECK_MS = 60000;
+const SLEEP_CHECK_MS = 30000; // Check more frequently when sleeping
 
 function getETNow(): Date {
   const now = new Date();
@@ -411,7 +411,7 @@ async function stocksSmartLoop(): Promise<void> {
     const et = getETNow();
     logger.info(`[STOCKS/${stocksMode}] ET: ${et.toLocaleTimeString('en-US')}`);
     await runStocksCycle();
-    const interval = inMarket ? config.checkIntervalMs : 2 * 60 * 1000; // 2min pre-market
+    const interval = inMarket ? config.checkIntervalMs : 15000; // 15s pre-market (AGGRESSIVE)
     if (stocksBotRunning) stocksTimer = setTimeout(stocksSmartLoop, interval);
   } else {
     stocksMode = 'SLEEPING';
