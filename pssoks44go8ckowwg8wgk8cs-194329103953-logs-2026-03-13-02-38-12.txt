@@ -1,0 +1,1000 @@
+ℹ️ [2026-03-13 02:17:37] Got 100 crypto bars for PEPE/USD (1Hour)
+ℹ️ [2026-03-13 02:17:37] Got 100 crypto bars for BTC/USD (1Hour)
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] ARB/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ARB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] ARB/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] ARB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.10
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] ADA/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ADA/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] ADA/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.1% ROC20=-3.7% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] ADA/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.27
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] JUP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ICP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] STX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] BAL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] FLOKI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] TRX/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] TRX/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ZRX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] VET/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] COMP/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] LRC/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] INJ/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] MATIC/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] MATIC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] NEAR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] NEAR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] TON/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ALGO/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] ALGO/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$1.00
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] BNB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] JASMY/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] MKR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] MKR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] OP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] APT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] SNX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] XRP/USD: HOLD (confidence: 0.10)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] XRP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] XRP/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=0.5% ROC20=-2.8% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#5(top10)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] XRP/USD: BUY x23.0073 (score: 0.108) — crypto_technical: HOLD(0.10) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$1.41
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] YFI/USD: HOLD (confidence: 0.19)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] YFI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] YFI/USD: HOLD (confidence: 0.10) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.6%) | MOM: ROC10=-2.2% ROC20=-3.5% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#292(smallcap)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] YFI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.19) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$2561.30
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] CRV/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] CRV/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] CRV/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.7% ROC20=-5.1% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.1% | rank#120(smallcap)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] CRV/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.24
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] GRT/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] GRT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] GRT/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-3.6% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+9.6% | rank#375(smallcap)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] GRT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.03
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] UNI/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] UNI/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] UNI/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.8x avg | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.0%
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] UNI/USD: BUY x4.6768 (score: 0.062) — crypto_technical: SELL(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.062 @$3.98
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] DOT/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] DOT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] DOT/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=0.5% ROC20=-1.8% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] DOT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$1.53
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] ONDO/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ONDO/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] ONDO/USD: HOLD (confidence: 0.17) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 3.3x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] ONDO/USD: BUY x122.2706 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.17) → score=0.108 @$0.26
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] FIL/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] FIL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] FIL/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.8% | TRADES: no trade count data | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] FIL/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$0.89
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] AAVE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] AAVE/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] AAVE/USD: HOLD (confidence: 0.11) — VOL: Volume spike 2.3x avg (price down) | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-1.8% ROC20=-5.5% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.6%
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] AAVE/USD: BUY x0.281 (score: 0.108) — crypto_technical: HOLD(0.12) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$115.31
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] SHIB/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] SHIB/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] SHIB/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.5x avg | VWAP: Price +7.7% above VWAP — overbought | MOM: ROC10=-0.1% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.1%
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] SHIB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.00
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] ETH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] ETH/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] ETH/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.4% ROC20=-4.5% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.8% | rank#2(top10)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] ETH/USD: BUY x0.0153 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$2116.66
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] BONK/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] BONK/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] BONK/USD: HOLD (confidence: 0.12) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] BONK/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] SOL/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] SOL/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] SOL/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.3x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-1.1% ROC20=-4.2% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.0% | rank#7(top10)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] SOL/USD: BUY x0.3601 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$89.97
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] LINK/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] LINK/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] LINK/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.7x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.1% ROC20=-4.2% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] LINK/USD: BUY x3.4946 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.27
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] AVAX/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] AVAX/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] AVAX/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=0.3% ROC20=-3.8% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.7%
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] AVAX/USD: BUY x3.2495 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.97
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] XTZ/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] XTZ/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] XTZ/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#114(smallcap)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] XTZ/USD: SELL x0 (score: -0.046) — crypto_technical: SELL(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=-0.046 @$0.37
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] BAT/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] BAT/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] BAT/USD: HOLD (confidence: 0.14) — VOL: Low volume 0.5x avg — no conviction | VWAP: Price -1.7% below VWAP | MOM: ROC10=-0.8% ROC20=-4.3% | TRADES: Trade activity 1.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#211(smallcap)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] BAT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.14) → score=0.000 @$0.10
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] LTC/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] LTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] LTC/USD: HOLD (confidence: 0.10) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-0.4% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] LTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$55.09
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] SUSHI/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] SUSHI/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] SUSHI/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.9%) | MOM: ROC10=-1.3% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.3% | rank#412(smallcap)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] SUSHI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.21
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] WIF/USD: HOLD (confidence: 0.22)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] WIF/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] WIF/USD: HOLD (confidence: 0.12) — VOL: Volume spike 2.7x avg (price down) | VWAP: Price near VWAP (-0.5%) | MOM: ROC10=-1.9% ROC20=-6.1% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] WIF/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.22) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.17
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] PEPE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] PEPE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] PEPE/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.5% ROC20=-2.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] PEPE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+📊 [2026-03-13 02:17:37] [CRYPTO/TECH] BTC/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:17:37] [CRYPTO/CACHE] BTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:17:37] [CRYPTO/MOMENTUM] BTC/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.6% ROC20=-4.0% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#1(top10)
+ℹ️ [2026-03-13 02:17:37] [CRYPTO] BTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$71463.32
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY SOLUSD x0.3601 — Order ID: c875d81d-4964-4d72-b4fa-0eafe0c45bc1
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY SOL/USD x0.3601
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY AAVEUSD x0.281 — Order ID: 89371280-67b1-46a5-b38e-0d0ca977cd4e
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY AAVE/USD x0.281
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY AVAXUSD x3.2495 — Order ID: db3d0683-d71e-42e0-a708-d23df77e98f4
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY AVAX/USD x3.2495
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY ONDO/USD x122.2706 — Order ID: a02adfd5-83c3-456e-adff-04ef3756930f
+🎯 [2026-03-13 02:17:38] [CRYPTO] BUY ONDO/USD x122.2706
+ℹ️ [2026-03-13 02:17:38] [CRYPTO] Cycle complete. Next in 300s
+ℹ️ [2026-03-13 02:17:48] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 42m)
+ℹ️ [2026-03-13 02:18:48] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 41m)
+ℹ️ [2026-03-13 02:19:48] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 40m)
+ℹ️ [2026-03-13 02:20:49] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 39m)
+ℹ️ [2026-03-13 02:21:49] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 38m)
+ℹ️ [2026-03-13 02:22:38] [CRYPTO] Starting cycle...
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for ALGO/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for ICP/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for LRC/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for JUP/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for STX/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for ZRX/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for INJ/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for BAL/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for COMP/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for MATIC/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for NEAR/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for VET/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for FLOKI/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for JASMY/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for BNB/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for HBAR/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for MKR/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for ATOM/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for SNX/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for TRX/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for TON/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for APT/USD (1Hour)
+📊 [2026-03-13 02:22:39] [CRYPTO/CACHE] ALGO/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:22:39] [CRYPTO] ALGO/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$1.00
+📊 [2026-03-13 02:22:39] [CRYPTO/CACHE] ICP/USD: HOLD (0.60) — cached
+ℹ️ [2026-03-13 02:22:39] Got 0 crypto bars for OP/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for BCH/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for YFI/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for UNI/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for BONK/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for DOGE/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for AAVE/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for XTZ/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for XRP/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for FIL/USD (1Hour)
+ℹ️ [2026-03-13 02:22:39] Got 100 crypto bars for GRT/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for SHIB/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for LTC/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for SOL/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for AVAX/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for BAT/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for LINK/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for SUSHI/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for ONDO/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for CRV/USD (1Hour)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] ZRX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] OP/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for ETH/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for ARB/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for WIF/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for ADA/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for DOT/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for PEPE/USD (1Hour)
+ℹ️ [2026-03-13 02:22:40] Got 100 crypto bars for BTC/USD (1Hour)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] STX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] VET/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] JUP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] JASMY/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] MATIC/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] MATIC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] INJ/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] FLOKI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] BAL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] COMP/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] ARB/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] ARB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] ETH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] ETH/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] NEAR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] NEAR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] BNB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] MKR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] MKR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] ATOM/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] HBAR/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] TON/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] TRX/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] TRX/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] LRC/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] SNX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] APT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] BCH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] BCH/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] YFI/USD: HOLD (confidence: 0.19)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] YFI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] UNI/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] UNI/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] DOGE/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] DOGE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] BONK/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] BONK/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] XTZ/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] XTZ/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] FIL/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] FIL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] BAT/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] BAT/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] SHIB/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] SHIB/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] AAVE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] AAVE/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] LTC/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] LTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] SOL/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] SOL/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] GRT/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] GRT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] AVAX/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] AVAX/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] LINK/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] LINK/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] XRP/USD: HOLD (confidence: 0.10)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] XRP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] SUSHI/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] SUSHI/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] CRV/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] CRV/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] ONDO/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] ONDO/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] WIF/USD: HOLD (confidence: 0.22)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] WIF/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] DOT/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] DOT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] ADA/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] ADA/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] PEPE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] PEPE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/TECH] BTC/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:22:40] [CRYPTO/CACHE] BTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] YFI/USD: HOLD (confidence: 0.10) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.6%) | MOM: ROC10=-2.2% ROC20=-3.5% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#292(smallcap)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] YFI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.19) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$2561.50
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] BONK/USD: HOLD (confidence: 0.12) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] BONK/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] UNI/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.8x avg | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.0%
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] UNI/USD: BUY x4.6838 (score: 0.062) — crypto_technical: SELL(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.062 @$3.97
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] FIL/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.8% | TRADES: no trade count data | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] FIL/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$0.89
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] AAVE/USD: HOLD (confidence: 0.11) — VOL: Volume spike 2.3x avg (price down) | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-1.8% ROC20=-5.5% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.6%
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] AAVE/USD: BUY x0.2803 (score: 0.108) — crypto_technical: HOLD(0.12) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$115.61
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] BAT/USD: HOLD (confidence: 0.14) — VOL: Low volume 0.5x avg — no conviction | VWAP: Price -1.7% below VWAP | MOM: ROC10=-0.8% ROC20=-4.3% | TRADES: Trade activity 1.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#211(smallcap)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] BAT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.14) → score=0.000 @$0.10
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] XTZ/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#114(smallcap)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] XTZ/USD: SELL x0 (score: -0.046) — crypto_technical: SELL(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=-0.046 @$0.37
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] LTC/USD: HOLD (confidence: 0.10) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-0.4% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] LTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$55.13
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] SOL/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.3x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-1.1% ROC20=-4.2% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.0% | rank#7(top10)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] SOL/USD: BUY x0.3599 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$90.02
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] GRT/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-3.6% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+9.6% | rank#375(smallcap)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] GRT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.03
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] XRP/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=0.5% ROC20=-2.8% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#5(top10)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] XRP/USD: BUY x22.9891 (score: 0.108) — crypto_technical: HOLD(0.10) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$1.41
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] LINK/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.7x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.1% ROC20=-4.2% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] LINK/USD: BUY x3.4995 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.26
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] SUSHI/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.9%) | MOM: ROC10=-1.3% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.3% | rank#412(smallcap)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] SUSHI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.21
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] ONDO/USD: HOLD (confidence: 0.17) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 3.3x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] ONDO/USD: BUY x122.1505 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.17) → score=0.108 @$0.27
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] CRV/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.7% ROC20=-5.1% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.1% | rank#120(smallcap)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] CRV/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.24
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] WIF/USD: HOLD (confidence: 0.12) — VOL: Volume spike 2.7x avg (price down) | VWAP: Price near VWAP (-0.5%) | MOM: ROC10=-1.9% ROC20=-6.1% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] WIF/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.22) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.17
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] ADA/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.1% ROC20=-3.7% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] ADA/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.27
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] DOT/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=0.5% ROC20=-1.8% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] DOT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$1.53
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] PEPE/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.5% ROC20=-2.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] PEPE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+ℹ️ [2026-03-13 02:22:40] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] ARB/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] ARB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.10
+ℹ️ [2026-03-13 02:22:40] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] ETH/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.4% ROC20=-4.5% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.9% | rank#2(top10)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] ETH/USD: BUY x0.0153 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$2117.13
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] BTC/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.6% ROC20=-4.0% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#1(top10)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] BTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$71481.25
+ℹ️ [2026-03-13 02:22:40] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] BCH/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.3% ROC20=-2.1% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] BCH/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$462.59
+ℹ️ [2026-03-13 02:22:40] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] DOGE/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.5% ROC20=-3.1% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.5% | rank#10(top10)
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] DOGE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.10
+ℹ️ [2026-03-13 02:22:40] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] SHIB/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.5x avg | VWAP: Price +7.7% above VWAP — overbought | MOM: ROC10=-0.1% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] SHIB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.00
+ℹ️ [2026-03-13 02:22:40] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:22:40] [CRYPTO/MOMENTUM] AVAX/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=0.3% ROC20=-3.8% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.0%
+ℹ️ [2026-03-13 02:22:40] [CRYPTO] AVAX/USD: BUY x3.2532 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.96
+🎯 [2026-03-13 02:22:40] [CRYPTO] BUY SOLUSD x0.3599 — Order ID: 7d305a4d-9721-4855-87ca-b5d817823bf0
+🎯 [2026-03-13 02:22:40] [CRYPTO] BUY SOL/USD x0.3599
+🎯 [2026-03-13 02:22:40] [CRYPTO] BUY AAVEUSD x0.2803 — Order ID: e7b8a215-211f-4311-ab40-91db344adae7
+🎯 [2026-03-13 02:22:40] [CRYPTO] BUY AAVE/USD x0.2803
+🎯 [2026-03-13 02:22:41] [CRYPTO] BUY AVAXUSD x3.2532 — Order ID: 3eeee8fa-da9d-4e15-8df8-ebf8abb49647
+🎯 [2026-03-13 02:22:41] [CRYPTO] BUY AVAX/USD x3.2532
+🎯 [2026-03-13 02:22:41] [CRYPTO] BUY ONDO/USD x122.1505 — Order ID: 63242ebb-3315-4d1b-9ebd-4bcdac961fd4
+🎯 [2026-03-13 02:22:41] [CRYPTO] BUY ONDO/USD x122.1505
+ℹ️ [2026-03-13 02:22:41] [CRYPTO] Cycle complete. Next in 300s
+ℹ️ [2026-03-13 02:22:50] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 37m)
+ℹ️ [2026-03-13 02:23:50] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 36m)
+ℹ️ [2026-03-13 02:24:50] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 35m)
+ℹ️ [2026-03-13 02:25:51] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 34m)
+ℹ️ [2026-03-13 02:26:51] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 33m)
+ℹ️ [2026-03-13 02:27:41] [CRYPTO] Starting cycle...
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for ATOM/USD (1Hour)
+ℹ️ [2026-03-13 02⚠️ [2026-03-13 02:17:37] [CRYPTO] Skipped XTZ/USD: No action needed
+⚠️ [2026-03-13 02:17:38] [CRYPTO] Skipped LINK/USD: Max position size reached ($324/$300)
+⚠️ [2026-03-13 02:17:38] [CRYPTO] Skipped XRP/USD: Max position size reached ($324/$300)
+⚠️ [2026-03-13 02:17:38] [CRYPTO] Skipped UNI/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:17:38] [CRYPTO] Skipped ETH/USD: Max position size reached ($302/$300)
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [COINGECKO] Failed to fetch: Error: CoinGecko HTTP 429
+⚠️ [2026-03-13 02:22:40] [CRYPTO] Skipped XTZ/USD: No action needed
+⚠️ [2026-03-13 02:22:40] [CRYPTO] Skipped LINK/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:22:40] [CRYPTO] Skipped XRP/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:22:40] [CRYPTO] Skipped UNI/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:22:41] [CRYPTO] Skipped ETH/USD: Max position size reached ($302/$300)
+:27:42] Got 0 crypto bars for ICP/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for LRC/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for ZRX/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for BAL/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for COMP/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for MATIC/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for VET/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for INJ/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for JASMY/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for JUP/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for NEAR/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for SNX/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for STX/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for TRX/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for TON/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for MKR/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for ALGO/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for BNB/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for HBAR/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for APT/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for FLOKI/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 0 crypto bars for OP/USD (1Hour)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] ATOM/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] LRC/USD: HOLD (0.60) — cached
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for LINK/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for UNI/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for DOT/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for XRP/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for AAVE/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for FIL/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for WIF/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for YFI/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for BONK/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for ETH/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for DOGE/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for XTZ/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for BCH/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for GRT/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for SHIB/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for AVAX/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for BTC/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for PEPE/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for SOL/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for BAT/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for LTC/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for ARB/USD (1Hour)
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] UNI/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] UNI/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] UNI/USD: HOLD (confidence: 0.11) — VOL: Normal volume 0.8x avg | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] UNI/USD: BUY x4.6715 (score: 0.062) — crypto_technical: SELL(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.062 @$3.98
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] LINK/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] LINK/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] LINK/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.7x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.1% ROC20=-4.2% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.8%
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] LINK/USD: BUY x3.5001 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.26
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for ONDO/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for CRV/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for ADA/USD (1Hour)
+ℹ️ [2026-03-13 02:27:42] Got 100 crypto bars for SUSHI/USD (1Hour)
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] ONDO/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] ONDO/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] ONDO/USD: HOLD (confidence: 0.17) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 3.3x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] ONDO/USD: BUY x122.186 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.17) → score=0.108 @$0.27
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] CRV/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] CRV/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] CRV/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.7% ROC20=-5.1% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.0% | rank#120(smallcap)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] CRV/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.24
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] BAL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] COMP/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] JUP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] MKR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] MKR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] INJ/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] NEAR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] NEAR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] ICP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] VET/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] MATIC/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] MATIC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] STX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] ALGO/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] ALGO/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$1.00
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] TON/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] SNX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] JASMY/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] BNB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] TRX/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] TRX/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] HBAR/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] FLOKI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] OP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] APT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] ZRX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] XRP/USD: HOLD (confidence: 0.10)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] XRP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] XRP/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=0.5% ROC20=-2.8% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#5(top10)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] XRP/USD: BUY x23.0014 (score: 0.108) — crypto_technical: HOLD(0.10) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$1.41
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] FIL/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] FIL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] FIL/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.8% | TRADES: no trade count data | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] FIL/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$0.89
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] AAVE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] AAVE/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] AAVE/USD: HOLD (confidence: 0.11) — VOL: Volume spike 2.3x avg (price down) | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-1.8% ROC20=-5.5% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.9%
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] AAVE/USD: BUY x0.2804 (score: 0.108) — crypto_technical: HOLD(0.12) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$115.54
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] DOT/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] DOT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] DOT/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=0.5% ROC20=-1.8% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] DOT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$1.53
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] YFI/USD: HOLD (confidence: 0.19)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] YFI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] YFI/USD: HOLD (confidence: 0.10) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.6%) | MOM: ROC10=-2.2% ROC20=-3.5% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#292(smallcap)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] YFI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.19) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$2563.49
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] BONK/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] BONK/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] BONK/USD: HOLD (confidence: 0.12) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] BONK/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] DOGE/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] DOGE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] DOGE/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.5% ROC20=-3.1% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.5% | rank#10(top10)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] DOGE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.10
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] ETH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] ETH/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] ETH/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.4% ROC20=-4.5% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.9% | rank#2(top10)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] ETH/USD: BUY x0.0153 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$2116.63
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] WIF/USD: HOLD (confidence: 0.22)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] WIF/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] WIF/USD: HOLD (confidence: 0.12) — VOL: Volume spike 2.7x avg (price down) | VWAP: Price near VWAP (-0.5%) | MOM: ROC10=-1.9% ROC20=-6.1% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] WIF/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.22) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.17
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] SHIB/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] SHIB/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] SHIB/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.5x avg | VWAP: Price +7.7% above VWAP — overbought | MOM: ROC10=-0.1% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] SHIB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.00
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] AVAX/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] AVAX/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] AVAX/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=0.3% ROC20=-3.8% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.0%
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] AVAX/USD: BUY x3.2538 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.96
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] GRT/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] GRT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] GRT/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-3.6% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+9.3% | rank#374(smallcap)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] GRT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.03
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] BCH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] BCH/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] BCH/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.3% ROC20=-2.1% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] BCH/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$462.59
+📊 [2026-03-13 02:27:42] [CRYPTO/TECH] PEPE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:42] [CRYPTO/CACHE] PEPE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:42] [CRYPTO/MOMENTUM] PEPE/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.5% ROC20=-2.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:27:42] [CRYPTO] PEPE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] SOL/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] SOL/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] SOL/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.3x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-1.1% ROC20=-4.2% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.8% | rank#7(top10)
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] SOL/USD: BUY x0.36 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$89.99
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] BAT/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] BAT/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] BAT/USD: HOLD (confidence: 0.14) — VOL: Low volume 0.5x avg — no conviction | VWAP: Price -1.7% below VWAP | MOM: ROC10=-0.8% ROC20=-4.3% | TRADES: Trade activity 1.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#211(smallcap)
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] BAT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.14) → score=0.000 @$0.10
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] LTC/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] LTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] LTC/USD: HOLD (confidence: 0.10) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-0.4% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] LTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$55.05
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] ARB/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] ARB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] ARB/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] ARB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.10
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] BTC/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] BTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] BTC/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.6% ROC20=-4.0% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#1(top10)
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] BTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$71486.78
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] XTZ/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] XTZ/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] XTZ/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#114(smallcap)
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] XTZ/USD: SELL x0 (score: -0.046) — crypto_technical: SELL(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=-0.046 @$0.37
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] SUSHI/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] SUSHI/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] SUSHI/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.9%) | MOM: ROC10=-1.3% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0% | rank#412(smallcap)
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] SUSHI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.21
+📊 [2026-03-13 02:27:43] [CRYPTO/TECH] ADA/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:27:43] [CRYPTO/CACHE] ADA/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:27:43] [CRYPTO/MOMENTUM] ADA/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.1% ROC20=-3.7% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.2%
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] ADA/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.27
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY SOLUSD x0.36 — Order ID: bafdb75c-28fb-40eb-b8a5-14e1c0910158
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY SOL/USD x0.36
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY AAVEUSD x0.2804 — Order ID: 69397c99-3060-4940-b885-52982ad035f0
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY AAVE/USD x0.2804
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY AVAXUSD x3.2538 — Order ID: 8fd2353c-5801-4264-b1dc-35745a0b8274
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY AVAX/USD x3.2538
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY ONDO/USD x122.186 — Order ID: b06309da-4c6b-4c59-9d6e-95c4d9dc7b4a
+🎯 [2026-03-13 02:27:43] [CRYPTO] BUY ONDO/USD x122.186
+ℹ️ [2026-03-13 02:27:43] [CRYPTO] Cycle complete. Next in 300s
+ℹ️ [2026-03-13 02:27:52] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 32m)
+ℹ️ [2026-03-13 02:28:52] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 31m)
+ℹ️ [2026-03-13 02:29:52] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 30m)
+ℹ️ [2026-03-13 02:30:53] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 29m)
+ℹ️ [2026-03-13 02:31:53] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 28m)
+ℹ️ [2026-03-13 02:32:43] [CRYPTO] Starting cycle...
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for HBAR/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for ATOM/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for ICP/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for STX/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for LRC/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for TRX/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for JUP/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for INJ/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for VET/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for FLOKI/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for MATIC/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for JASMY/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for OP/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for NEAR/USD (1Hour)
+ℹ️ [2026-03-13 02:32:44] Got 0 crypto bars for TON/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for MKR/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for ALGO/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for BNB/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for APT/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for ZRX/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for BAL/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for COMP/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 0 crypto bars for SNX/USD (1Hour)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] HBAR/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ICP/USD: HOLD (0.60) — cached
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for YFI/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for XRP/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for CRV/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for DOT/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for BONK/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for AAVE/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for AVAX/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for BCH/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for XTZ/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for ETH/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for LTC/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for SOL/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for BAT/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for FIL/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for LINK/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for SHIB/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for UNI/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for DOGE/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for ARB/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for GRT/USD (1Hour)
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] YFI/USD: HOLD (confidence: 0.19)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] YFI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] YFI/USD: HOLD (confidence: 0.10) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.6%) | MOM: ROC10=-2.2% ROC20=-3.5% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#292(smallcap)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] YFI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.19) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$2561.70
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] XRP/USD: HOLD (confidence: 0.10)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] XRP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] XRP/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=0.5% ROC20=-2.8% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#5(top10)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] XRP/USD: BUY x23.0539 (score: 0.108) — crypto_technical: HOLD(0.10) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$1.41
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for BTC/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for SUSHI/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for PEPE/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for ADA/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for ONDO/USD (1Hour)
+ℹ️ [2026-03-13 02:32:45] Got 100 crypto bars for WIF/USD (1Hour)
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] BTC/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] BTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] BTC/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.6% ROC20=-4.0% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#1(top10)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] BTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$71406.85
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] SUSHI/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] SUSHI/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] SUSHI/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.9%) | MOM: ROC10=-1.3% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0% | rank#412(smallcap)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] SUSHI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.21
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] FLOKI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] INJ/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] TRX/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] TRX/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] JASMY/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] MKR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] MKR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] LRC/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] MATIC/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] MATIC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ATOM/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] TON/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] SNX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] BNB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] NEAR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] NEAR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] APT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] BAL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] OP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] COMP/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] JUP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] STX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] VET/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ZRX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ALGO/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] ALGO/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$1.00
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] CRV/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] CRV/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] CRV/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.7% ROC20=-5.1% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.0% | rank#120(smallcap)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] CRV/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.24
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] DOT/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] DOT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] DOT/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=0.5% ROC20=-1.8% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] DOT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$1.53
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] BONK/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] BONK/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] BONK/USD: HOLD (confidence: 0.12) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] BONK/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] BCH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] BCH/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] BCH/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.3% ROC20=-2.1% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] BCH/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$463.05
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] AVAX/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] AVAX/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] AVAX/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=0.3% ROC20=-3.8% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.0%
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] AVAX/USD: BUY x3.2513 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.97
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] LTC/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] LTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] LTC/USD: HOLD (confidence: 0.10) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-0.4% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] LTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$55.00
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] AAVE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] AAVE/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] AAVE/USD: HOLD (confidence: 0.11) — VOL: Volume spike 2.3x avg (price down) | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-1.8% ROC20=-5.5% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.9%
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] AAVE/USD: BUY x0.2806 (score: 0.108) — crypto_technical: HOLD(0.12) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$115.45
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] ETH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ETH/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] ETH/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.4% ROC20=-4.5% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.9% | rank#2(top10)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] ETH/USD: BUY x0.0153 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$2115.06
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] XTZ/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] XTZ/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] XTZ/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#114(smallcap)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] XTZ/USD: SELL x0 (score: -0.046) — crypto_technical: SELL(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=-0.046 @$0.37
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] BAT/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] BAT/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] BAT/USD: HOLD (confidence: 0.14) — VOL: Low volume 0.5x avg — no conviction | VWAP: Price -1.7% below VWAP | MOM: ROC10=-0.8% ROC20=-4.3% | TRADES: Trade activity 1.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#211(smallcap)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] BAT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.14) → score=0.000 @$0.10
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] SOL/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] SOL/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] SOL/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.3x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-1.1% ROC20=-4.2% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.8% | rank#7(top10)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] SOL/USD: BUY x0.3608 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$89.81
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] DOGE/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] DOGE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] DOGE/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.5% ROC20=-3.1% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.5% | rank#10(top10)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] DOGE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.10
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] LINK/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] LINK/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] LINK/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.7x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.1% ROC20=-4.2% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.8%
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] LINK/USD: BUY x3.5016 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.25
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] UNI/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] UNI/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] UNI/USD: HOLD (confidence: 0.11) — VOL: Normal volume 0.8x avg | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] UNI/USD: BUY x4.6725 (score: 0.062) — crypto_technical: SELL(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.062 @$3.98
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] ARB/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ARB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] ARB/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] ARB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.10
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] SHIB/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] SHIB/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] SHIB/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.5x avg | VWAP: Price +7.7% above VWAP — overbought | MOM: ROC10=-0.1% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.0%
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] SHIB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.00
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] GRT/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] GRT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] GRT/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-3.6% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+9.3% | rank#374(smallcap)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] GRT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.03
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] FIL/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] FIL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] FIL/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.8% | TRADES: no trade count data | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] FIL/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$0.89
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] ONDO/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ONDO/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] ONDO/USD: HOLD (confidence: 0.17) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 3.3x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] ONDO/USD: BUY x122.2388 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.17) → score=0.108 @$0.27
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] WIF/USD: HOLD (confidence: 0.22)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] WIF/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] WIF/USD: HOLD (confidence: 0.12) — VOL: Volume spike 2.7x avg (price down) | VWAP: Price near VWAP (-0.5%) | MOM: ROC10=-1.9% ROC20=-6.1% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] WIF/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.22) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.17
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] ADA/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] ADA/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] ADA/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.1% ROC20=-3.7% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.2%
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] ADA/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.27
+📊 [2026-03-13 02:32:45] [CRYPTO/TECH] PEPE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:32:45] [CRYPTO/CACHE] PEPE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:32:45] [CRYPTO/MOMENTUM] PEPE/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.5% ROC20=-2.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:32:45] [CRYPTO] PEPE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+🎯 [2026-03-13 02:32:45] [CRYPTO] BUY SOLUSD x0.3608 — Order ID: d9b10bb9-f893-4c3a-84ed-9f4de23c3952
+🎯 [2026-03-13 02:32:45] [CRYPTO] BUY SOL/USD x0.3608
+🎯 [2026-03-13 02:32:45] [CRYPTO] BUY AAVEUSD x0.2806 — Order ID: 452dcf22-c667-493f-b837-17989ca953a8
+🎯 [2026-03-13 02:32:45] [CRYPTO] BUY AAVE/USD x0.2806
+🎯 [2026-03-13 02:32:45] [CRYPTO] BUY AVAXUSD x3.2513 — Order ID: f996521c-01ac-48ae-8241-12491702ca29
+🎯 [2026-03-13 02:32:45] [CRYPTO] BUY AVAX/USD x3.2513
+🎯 [2026-03-13 02:32:46] [CRYPTO] BUY ONDO/USD x122.2388 — Order ID: 19a58ec4-468c-481b-acfa-9f8a24fdda84
+🎯 [2026-03-13 02:32:46] [CRYPTO] BUY ONDO/USD x122.2388
+ℹ️ [2026-03-13 02:32:46] [CRYPTO] Cycle complete. Next in 300s
+ℹ️ [2026-03-13 02:32:54] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 27m)
+ℹ️ [2026-03-13 02:33:54] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 26m)
+ℹ️ [2026-03-13 02:34:54] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 25m)
+🎯 [2026-03-13 02:35:35] [EXIT] Closing SOLUSD — Stop-loss: -0.98% <= -0.8% (P&L: $-2.85)
+🎯 [2026-03-13 02:35:35] [CRYPTO] SELL SOLUSD x3.225416249 — Order ID: 8a57138d-d8c3-4723-a5f9-35e709f47f5e
+ℹ️ [2026-03-13 02:35:55] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 24m)
+ℹ️ [2026-03-13 02:36:55] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 23m)
+🎯 [2026-03-13 02:37:36] [EXIT] Closing ETHUSD — Stop-loss: -0.89% <= -0.8% (P&L: $-2.70)
+🎯 [2026-03-13 02:37:36] [CRYPTO] SELL ETHUSD x0.14254275 — Order ID: de7331b2-9e3d-48ac-9439-a35bee21cc73
+ℹ️ [2026-03-13 02:37:46] [CRYPTO] Starting cycle...
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for BNB/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for ATOM/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for HBAR/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for ICP/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for LRC/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for STX/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for JUP/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for BAL/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for TRX/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for MKR/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for ALGO/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for ZRX/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for FLOKI/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for INJ/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for COMP/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for MATIC/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for VET/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for NEAR/USD (1Hour)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ATOM/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] HBAR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for OP/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for TON/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for JASMY/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for SNX/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 0 crypto bars for APT/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for DOGE/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for FIL/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for XRP/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for BCH/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for XTZ/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for LTC/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for BAT/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for YFI/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for CRV/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for AAVE/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for UNI/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for SOL/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for LINK/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for BONK/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for GRT/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for DOT/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for AVAX/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for SUSHI/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for WIF/USD (1Hour)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] MATIC/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:37:47] [CRYPTO] MATIC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] VET/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for SHIB/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for ARB/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for ADA/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for ETH/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for ONDO/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for BTC/USD (1Hour)
+ℹ️ [2026-03-13 02:37:47] Got 100 crypto bars for PEPE/USD (1Hour)
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] ARB/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ARB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] SHIB/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] SHIB/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] BAL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ICP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] LRC/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] BNB/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] MKR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:37:47] [CRYPTO] MKR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ALGO/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:37:47] [CRYPTO] ALGO/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$1.00
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] JUP/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] NEAR/USD: BUY (0.72) — cached
+ℹ️ [2026-03-13 02:37:47] [CRYPTO] NEAR/USD: HOLD x0 (score: 0.108) — crypto_technical: HOLD(0.00) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.00) → score=0.108 @$?
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ZRX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] STX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] TRX/USD: HOLD (0.65) — cached
+ℹ️ [2026-03-13 02:37:47] [CRYPTO] TRX/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.00) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.00) → score=0.000 @$?
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] COMP/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] FLOKI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] INJ/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] TON/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] SNX/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] OP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] JASMY/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] APT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] XRP/USD: HOLD (confidence: 0.10)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] XRP/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] FIL/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] FIL/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] BCH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] BCH/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] DOGE/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] DOGE/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] XTZ/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] XTZ/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] LTC/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] LTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] BAT/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] BAT/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] YFI/USD: HOLD (confidence: 0.19)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] YFI/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] AAVE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] AAVE/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] CRV/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] CRV/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] UNI/USD: SELL (confidence: 0.23)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] UNI/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] SOL/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] SOL/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] SUSHI/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] SUSHI/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] BONK/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] BONK/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] GRT/USD: HOLD (confidence: 0.13)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] GRT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] LINK/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] LINK/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] DOT/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] DOT/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] WIF/USD: HOLD (confidence: 0.22)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] WIF/USD: HOLD (0.60) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] AVAX/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] AVAX/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] ETH/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ETH/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] ONDO/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ONDO/USD: BUY (0.72) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] ADA/USD: HOLD (confidence: 0.11)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] ADA/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] BTC/USD: HOLD (confidence: 0.23)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] BTC/USD: HOLD (0.65) — cached
+📊 [2026-03-13 02:37:47] [CRYPTO/TECH] PEPE/USD: HOLD (confidence: 0.12)
+📊 [2026-03-13 02:37:47] [CRYPTO/CACHE] PEPE/USD: HOLD (0.60) — cached
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] SUSHI/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.9%) | MOM: ROC10=-1.3% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.2% | rank#411(smallcap)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] SUSHI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.21
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] DOGE/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.5% ROC20=-3.1% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.3% | rank#10(top10)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] DOGE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.10
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] CRV/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.7% ROC20=-5.1% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.3% | rank#120(smallcap)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] CRV/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.24
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] UNI/USD: HOLD (confidence: 0.11) — VOL: Normal volume 0.8x avg | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 0.7x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] UNI/USD: BUY x4.6681 (score: 0.062) — crypto_technical: SELL(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.062 @$3.98
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] XTZ/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-4.4% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#114(smallcap)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] XTZ/USD: SELL x0 (score: -0.046) — crypto_technical: SELL(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=-0.046 @$0.37
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] BTC/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.6% ROC20=-4.0% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#1(top10)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] BTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$71371.40
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] FIL/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.8% | TRADES: no trade count data | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] FIL/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$0.89
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] ARB/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] ARB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.10
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] BONK/USD: HOLD (confidence: 0.12) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=-1.2% ROC20=-4.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] BONK/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.23) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] YFI/USD: HOLD (confidence: 0.10) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.6%) | MOM: ROC10=-2.2% ROC20=-3.5% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#292(smallcap)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] YFI/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.19) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$2558.86
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] SHIB/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.5x avg | VWAP: Price +7.7% above VWAP — overbought | MOM: ROC10=-0.1% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.1%
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] SHIB/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.00
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+⚠️ [2026-03-13 02:27:43] [CRYPTO] Skipped XTZ/USD: No action needed
+⚠️ [2026-03-13 02:27:43] [CRYPTO] Skipped LINK/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:27:43] [CRYPTO] Skipped XRP/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:27:43] [CRYPTO] Skipped UNI/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:27:43] [CRYPTO] Skipped ETH/USD: Max position size reached ($302/$300)
+⚠️ [2026-03-13 02:32:45] [CRYPTO] Skipped XTZ/USD: No action needed
+⚠️ [2026-03-13 02:32:45] [CRYPTO] Skipped LINK/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:32:45] [CRYPTO] Skipped XRP/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:32:45] [CRYPTO] Skipped UNI/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:32:45] [CRYPTO] Skipped ETH/USD: Max position size reached ($301/$300)
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] ADA/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.1% ROC20=-3.7% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.2%
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] ADA/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.27
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] AAVE/USD: HOLD (confidence: 0.11) — VOL: Volume spike 2.3x avg (price down) | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-1.8% ROC20=-5.5% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.8%
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] AAVE/USD: BUY x0.2815 (score: 0.108) — crypto_technical: HOLD(0.12) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$115.09
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] LTC/USD: HOLD (confidence: 0.10) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.2%) | MOM: ROC10=-0.4% ROC20=-3.1% | TRADES: Trade activity 2.2x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] LTC/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.10) → score=0.000 @$55.00
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] DOT/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.8%) | MOM: ROC10=0.5% ROC20=-1.8% | TRADES: Trade activity 0.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] DOT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$1.53
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] GRT/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.7%) | MOM: ROC10=-1.4% ROC20=-3.6% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+9.1% | rank#375(smallcap)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] GRT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.13) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.13) → score=0.000 @$0.03
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] LINK/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.7x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.1% ROC20=-4.2% | TRADES: Trade activity 0.9x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.7%
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] LINK/USD: BUY x3.5045 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.25
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] BCH/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.0x avg — no conviction | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-0.3% ROC20=-2.1% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: no signal
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] BCH/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.11) + crypto_sentiment: HOLD(0.65) + crypto_momentum: HOLD(0.11) → score=0.000 @$463.27
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] XRP/USD: HOLD (confidence: 0.11) — VOL: Low volume 0.2x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=0.5% ROC20=-2.8% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#5(top10)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] XRP/USD: BUY x23.0605 (score: 0.108) — crypto_technical: HOLD(0.10) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.11) → score=0.108 @$1.40
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] BAT/USD: HOLD (confidence: 0.14) — VOL: Low volume 0.5x avg — no conviction | VWAP: Price -1.7% below VWAP | MOM: ROC10=-0.8% ROC20=-4.3% | TRADES: Trade activity 1.5x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: rank#211(smallcap)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] BAT/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.14) → score=0.000 @$0.10
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] SOL/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.3x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-1.1% ROC20=-4.2% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+4.6% | rank#7(top10)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] SOL/USD: BUY x0.362 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$89.52
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] WIF/USD: HOLD (confidence: 0.12) — VOL: Volume spike 2.7x avg (price down) | VWAP: Price near VWAP (-0.5%) | MOM: ROC10=-1.9% ROC20=-6.1% | TRADES: Trade activity 0.8x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] WIF/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.22) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.17
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] ETH/USD: HOLD (confidence: 0.13) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.1%) | MOM: ROC10=-0.4% ROC20=-4.5% | TRADES: Trade activity 1.1x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+3.6% | rank#2(top10)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] ETH/USD: BUY x0.0153 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$2111.25
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] ONDO/USD: HOLD (confidence: 0.17) — VOL: Volume spike 4.0x avg (price down) | VWAP: Price near VWAP (-0.4%) | MOM: ROC10=-1.3% ROC20=-4.6% | TRADES: Trade activity 3.3x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] ONDO/USD: BUY x122.2157 (score: 0.108) — crypto_technical: HOLD(0.23) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.17) → score=0.108 @$0.27
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] PEPE/USD: HOLD (confidence: 0.12) — VOL: Low volume 0.1x avg — no conviction | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=-0.5% ROC20=-2.9% | TRADES: Trade activity 0.0x normal | F&G: Fear&Greed=15(Extreme Fear)
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] PEPE/USD: HOLD x0 (score: 0.000) — crypto_technical: HOLD(0.12) + crypto_sentiment: HOLD(0.60) + crypto_momentum: HOLD(0.12) → score=0.000 @$0.00
+ℹ️ [2026-03-13 02:37:48] [COINGECKO] Fetched market data for 30 coins
+📊 [2026-03-13 02:37:48] [CRYPTO/MOMENTUM] AVAX/USD: HOLD (confidence: 0.13) — VOL: Normal volume 0.6x avg | VWAP: Price near VWAP (-0.3%) | MOM: ROC10=0.3% ROC20=-3.8% | TRADES: Trade activity 0.4x normal | F&G: Fear&Greed=15(Extreme Fear) | CG: 24h+5.0%
+ℹ️ [2026-03-13 02:37:48] [CRYPTO] AVAX/USD: BUY x3.2585 (score: 0.108) — crypto_technical: HOLD(0.11) + crypto_sentiment: BUY(0.72) + crypto_momentum: HOLD(0.13) → score=0.108 @$9.94
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY SOL/USD x0.362 — Order ID: ae93685a-ff64-4651-9684-e3ae4f49b504
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY SOL/USD x0.362
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY AAVEUSD x0.2815 — Order ID: 75bd77f0-e709-43ad-b8af-e9cd8f5cb54c
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY AAVE/USD x0.2815
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY AVAXUSD x3.2585 — Order ID: 8db4ae15-7bc8-4e5e-b864-0078227cca51
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY AVAX/USD x3.2585
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY ETH/USD x0.0153 — Order ID: 67f83066-0ab1-40e9-a808-3edde95cd9ca
+🎯 [2026-03-13 02:37:48] [CRYPTO] BUY ETH/USD x0.0153
+🎯 [2026-03-13 02:37:49] [CRYPTO] BUY ONDO/USD x122.2157 — Order ID: eebd0453-a231-4f5d-b6c3-97d7349b3183
+🎯 [2026-03-13 02:37:49] [CRYPTO] BUY ONDO/USD x122.2157
+ℹ️ [2026-03-13 02:37:49] [CRYPTO] Cycle complete. Next in 300s
+ℹ️ [2026-03-13 02:37:55] [STOCKS/SLEEPING] Next wake: Fri 9:00 AM ET (10h 22m)
+⚠️ [2026-03-13 02:37:48] [CRYPTO] Skipped XTZ/USD: No action needed
+⚠️ [2026-03-13 02:37:48] [CRYPTO] Skipped LINK/USD: Max position size reached ($323/$300)
+⚠️ [2026-03-13 02:37:48] [CRYPTO] Skipped XRP/USD: Max position size reached ($322/$300)
+⚠️ [2026-03-13 02:37:48] [CRYPTO] Skipped UNI/USD: Max position size reached ($323/$300)

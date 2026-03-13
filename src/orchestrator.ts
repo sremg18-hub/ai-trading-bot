@@ -39,17 +39,11 @@ export async function makeDecision(
   const strategies: StrategyResult[] = [technical, aiNews, copy, alternative];
 
   // Weighted scoring: score = Σ(score_i × weight_i × confidence_i)
-  // Alternative data gets 15% weight (reduced from other strategies)
-  const weightAlt = 0.15;
-  const weightTechnicalAdj = config.weightTechnical * 0.85;
-  const weightAiNewsAdj = config.weightAiNews * 0.85;
-  const weightCopyAdj = config.weightCopy * 0.85;
-
   let weightedScore =
-    signalToScore(technical.signal) * weightTechnicalAdj * technical.confidence +
-    signalToScore(aiNews.signal) * weightAiNewsAdj * aiNews.confidence +
-    signalToScore(copy.signal) * weightCopyAdj * copy.confidence +
-    signalToScore(alternative.signal) * weightAlt * alternative.confidence;
+    signalToScore(technical.signal) * config.weightTechnical * technical.confidence +
+    signalToScore(aiNews.signal) * config.weightAiNews * aiNews.confidence +
+    signalToScore(copy.signal) * config.weightCopy * copy.confidence +
+    signalToScore(alternative.signal) * config.weightAlternative * alternative.confidence;
 
   // Reddit modifier: adds up to ±15% to the score (non-critical, boosts conviction)
   let redditNote = '';

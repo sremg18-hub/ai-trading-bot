@@ -13,6 +13,7 @@ export interface Config {
   weightTechnical: number;
   weightAiNews: number;
   weightCopy: number;
+  weightAlternative: number;  // Free data sources (Yahoo, RSS, Market Breadth)
   port: number;
   paper: true; // ALWAYS true — never real money
   // Crypto
@@ -45,6 +46,7 @@ export function loadConfig(): Config {
     weightTechnical: Number(process.env.WEIGHT_TECHNICAL) || 0.40,
     weightAiNews: Number(process.env.WEIGHT_AI_NEWS) || 0.35,
     weightCopy: Number(process.env.WEIGHT_COPY) || 0.25,
+    weightAlternative: Number(process.env.WEIGHT_ALTERNATIVE) || 0.00,  // 0% default, opt-in
     port: Number(process.env.PORT) || 3000,
     paper: true, // HARDCODED — NEVER change this
     // Crypto
@@ -75,7 +77,7 @@ export function validateConfig(config: Config): string[] {
     errors.push('TRADE_SYMBOLS must have at least one symbol');
   }
 
-  const weightSum = config.weightTechnical + config.weightAiNews + config.weightCopy;
+  const weightSum = config.weightTechnical + config.weightAiNews + config.weightCopy + config.weightAlternative;
   if (Math.abs(weightSum - 1.0) > 0.01) {
     errors.push(`Stock strategy weights must sum to 1.0 (currently ${weightSum.toFixed(2)})`);
   }
