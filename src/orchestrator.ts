@@ -5,6 +5,7 @@ import { getPositions, getAccount } from './services/alpaca';
 import { analyzeTechnical } from './strategies/technical';
 import { analyzeNews } from './strategies/ai-news';
 import { analyzeCopySignal } from './strategies/copy-trading';
+import { analyzeAlternativeData } from './strategies/alternative-data';
 import { getRedditMentions } from './services/reddit';
 import { OrchestratorDecision, StrategyResult, PositionInfo, signalToScore } from './types';
 import { logger } from './utils/logger';
@@ -27,20 +28,28 @@ export async function makeDecision(
     getRedditMentions(symbol),
   ]);
 
-  // Run all 3 strategies in parallel
-  const [technical, aiNews, copy] = await Promise.all([
+  // Run all strategies in parallel (4th: alternative data - FREE)
+  const [technical, aiNews, copy, alternative] = await Promise.all([
     analyzeTechnical(symbol, bars),
     analyzeNews(symbol, news),
     analyzeCopySignal(symbol, positions, account.equity),
+    analyzeAlternativeData(symbol),
   ]);
 
-  const strategies: StrategyResult[] = [technical, aiNews, copy];
+  const strategies: StrategyResult[] = [technical, aiNews, copy, alternative];
 
   // Weighted scoring: score = Σ(score_i × weight_i × confidence_i)
+  // Alternative data gets 15% weight (reduced from other strategies)
+  const weightAlt = 0.15;
+  const weightTechnicalAdj = config.weightTechnical * 0.85;
+  const weightAiNewsAdj = config.weightAiNews * 0.85;
+  const weightCopyAdj = config.weightCopy * 0.85;
+
   let weightedScore =
-    signalToScore(technical.signal) * config.weightTechnical * technical.confidence +
-    signalToScore(aiNews.signal) * config.weightAiNews * aiNews.confidence +
-    signalToScore(copy.signal) * config.weightCopy * copy.confidence;
+    signalToScore(technical.signal) * weightTechnicalAdj * technical.confidence +
+    signalToScore(aiNews.signal) * weightAiNewsAdj * aiNews.confidence +
+    signalToScore(copy.signal) * weightCopyAdj * copy.confidence +
+    signalToScore(alternative.signal) * weightAlt * alternative.confidence;
 
   // Reddit modifier: adds up to ±15% to the score (non-critical, boosts conviction)
   let redditNote = '';

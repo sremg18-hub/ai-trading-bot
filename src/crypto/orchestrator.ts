@@ -3,6 +3,7 @@ import { getCryptoBars, getLatestCryptoQuote, getPositions, getAccount } from '.
 import { analyzeTechnicalCrypto } from './technical';
 import { analyzeCryptoSentiment } from './sentiment';
 import { analyzeMomentum } from './momentum';
+import { getRSSSentiment } from '../services/rss-news';
 import { OrchestratorDecision, StrategyResult, PositionInfo, signalToScore } from '../types';
 import { logger } from '../utils/logger';
 
@@ -19,21 +20,30 @@ export async function makeCryptoDecision(
     cachedPositions ? Promise.resolve(cachedPositions) : getPositions(),
   ]);
 
-  // Run all 3 crypto strategies in parallel
-  const account = await getAccount(); // needed for copy strategy (equity)
-  const [technical, sentiment, momentum] = await Promise.all([
+  // Run all crypto strategies in parallel + FREE RSS sentiment
+  const account = await getAccount();
+  const [technical, sentiment, momentum, rssNews] = await Promise.all([
     analyzeTechnicalCrypto(symbol, bars),
     analyzeCryptoSentiment(symbol),
     analyzeMomentum(symbol, bars),
+    getRSSSentiment(symbol), // FREE alternative data
   ]);
 
   const strategies: StrategyResult[] = [technical, sentiment, momentum];
 
-  // Weighted scoring
+  // Add RSS as additional boost if strong signal
+  let rssBoost = 0;
+  if (rssNews && Math.abs(rssNews.score) > 0.3) {
+    rssBoost = rssNews.score * 0.1; // 10% boost
+    logger.signal(`[CRYPTO/RSS] ${symbol}: ${rssNews.sentiment} boost (${rssNews.score.toFixed(2)})`);
+  }
+
+  // Weighted scoring + RSS boost
   const weightedScore =
     signalToScore(technical.signal) * config.cryptoWeightTechnical * technical.confidence +
     signalToScore(sentiment.signal) * config.cryptoWeightAiNews * sentiment.confidence +
-    signalToScore(momentum.signal) * config.cryptoWeightMomentum * momentum.confidence;
+    signalToScore(momentum.signal) * config.cryptoWeightMomentum * momentum.confidence +
+    rssBoost;
 
   // AGGRESSIVE SCALPING: Very low thresholds for high-frequency crypto trading
   let action: 'BUY' | 'SELL' | 'HOLD';
